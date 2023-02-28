@@ -33,11 +33,11 @@ myproject\Lib\site-packages\django\conf\global_settings.py:
   565: CSRF_COOKIE_AGE = 60 * 60 * 24 * 7 * 52
   566: CSRF_COOKIE_DOMAIN = None
   567: CSRF_COOKIE_PATH = "/"
-  568: CSRF_COOKIE_SECURE = True
-  569: CSRF_COOKIE_HTTPONLY = True
+  568: CSRF_COOKIE_SECURE = False
+  569: CSRF_COOKIE_HTTPONLY = False
   570: CSRF_COOKIE_SAMESITE = "Lax"
   571: CSRF_HEADER_NAME = "HTTP_X_CSRFTOKEN"
-  572: CSRF_TRUSTED_ORIGINS = ['http://njeri-daniel.azurewebsites.net']
+  572: CSRF_TRUSTED_ORIGINS = ['njeri-daniel.azurewebsites.net']
   573: CSRF_USE_SESSIONS = False
   574  
   575: # Whether to mask CSRF cookie value. It's a transitional setting helpful in
