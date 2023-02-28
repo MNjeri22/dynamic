@@ -1,0 +1,2657 @@
+# Query: csrf
+# ContextLines: 1
+
+870 results - 135 files
+
+myproject\Lib\site-packages\django\conf\__init__.py:
+   36  
+   37: CSRF_COOKIE_MASKED_DEPRECATED_MSG = (
+   38:     "The CSRF_COOKIE_MASKED transitional setting is deprecated. Support for "
+   39      "it will be removed in Django 5.0."
+
+  223  
+  224:         if self.is_overridden("CSRF_COOKIE_MASKED"):
+  225:             warnings.warn(CSRF_COOKIE_MASKED_DEPRECATED_MSG, RemovedInDjango50Warning)
+  226  
+
+  275              warnings.warn(USE_L10N_DEPRECATED_MSG, RemovedInDjango50Warning)
+  276:         if name == "CSRF_COOKIE_MASKED":
+  277:             warnings.warn(CSRF_COOKIE_MASKED_DEPRECATED_MSG, RemovedInDjango50Warning)
+  278          super().__setattr__(name, value)
+
+myproject\Lib\site-packages\django\conf\global_settings.py:
+  555  ########
+  556: # CSRF #
+  557  ########
+
+  559  # Dotted path to callable to be used as view when a request is
+  560: # rejected by the CSRF middleware.
+  561: CSRF_FAILURE_VIEW = "django.views.csrf.csrf_failure"
+  562  
+  563: # Settings for CSRF cookie.
+  564: CSRF_COOKIE_NAME = "csrftoken"
+  565: CSRF_COOKIE_AGE = 60 * 60 * 24 * 7 * 52
+  566: CSRF_COOKIE_DOMAIN = None
+  567: CSRF_COOKIE_PATH = "/"
+  568: CSRF_COOKIE_SECURE = True
+  569: CSRF_COOKIE_HTTPONLY = True
+  570: CSRF_COOKIE_SAMESITE = "Lax"
+  571: CSRF_HEADER_NAME = "HTTP_X_CSRFTOKEN"
+  572: CSRF_TRUSTED_ORIGINS = ['http://njeri-daniel.azurewebsites.net']
+  573: CSRF_USE_SESSIONS = False
+  574  
+  575: # Whether to mask CSRF cookie value. It's a transitional setting helpful in
+  576  # migrating multiple instance of the same project to Django 4.1+.
+  577: CSRF_COOKIE_MASKED = False
+  578  
+
+myproject\Lib\site-packages\django\conf\locale\af\LC_MESSAGES\django.po:
+  1160  
+  1161: msgid "CSRF verification failed. Request aborted."
+  1162: msgstr "CSRF-verifikasie het misluk. Versoek is laat val."
+  1163  
+
+  1179  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1180: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1181  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1185  msgid ""
+  1186: "You are seeing this message because this site requires a CSRF cookie when "
+  1187  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1189  msgstr ""
+  1190: "U sien hierdie boodskap omdat dié werf ’n CSRF-koekie benodig wanneer vorms "
+  1191  "ingedien word. Dié koekie word vir sekuriteitsredes benodig om te te "
+
+myproject\Lib\site-packages\django\conf\locale\ar\LC_MESSAGES\django.po:
+  1238  
+  1239: msgid "CSRF verification failed. Request aborted."
+  1240: msgstr "تم الفشل للتحقق من CSRF. تم إنهاء الطلب."
+  1241  
+
+  1262  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1263: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1264  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1267  "إذا كنت تستخدم العلامة <meta name=\"referrer\" content=\"no-referrer\"> أو "
+  1268: "تضمين رأس “Referrer-Policy: no-referrer”، يرجى إزالتها. تتطلب حماية CSRF أن "
+  1269  "يقوم رأس “Referer” بإجراء فحص صارم للمراجع. إذا كنت قلقًا بشأن الخصوصية ، "
+
+  1272  msgid ""
+  1273: "You are seeing this message because this site requires a CSRF cookie when "
+  1274  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1276  msgstr ""
+  1277: "أنت ترى هذه الرسالة لأن هذا الموقع يتطلب كعكة CSRF عند تقديم النماذج. ملف "
+  1278  "الكعكة هذا مطلوب  لأسباب أمنية في تعريف الإرتباط، لضمان أنه لم يتم اختطاف "
+
+myproject\Lib\site-packages\django\conf\locale\ar_DZ\LC_MESSAGES\django.po:
+  1245  
+  1246: msgid "CSRF verification failed. Request aborted."
+  1247: msgstr "تم الفشل للتحقق من CSRF. تم إنهاء الطلب."
+  1248  
+
+  1270  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1271: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1272  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1276  "\"> أو تتضمن رأس “Referrer-Policy: no-referrer” ، فيرجى إزالتها. تتطلب حماية "
+  1277: "CSRF رأس “Referer” القيام بالتحقق من “strict referer”. إذا كنت مهتمًا "
+  1278  "بالخصوصية ، فاستخدم بدائل مثل <a rel=\\\"noreferrer\\\" …> للروابط إلى مواقع "
+
+  1281  msgid ""
+  1282: "You are seeing this message because this site requires a CSRF cookie when "
+  1283  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1285  msgstr ""
+  1286: "تشاهد هذه الرسالة لأن هذا الموقع يتطلب ملف تعريف ارتباط CSRF Cookie عند "
+  1287  "إرسال النماذج. ملف تعريف ارتباط Cookie هذا مطلوب لأسباب أمنية ، لضمان عدم "
+
+myproject\Lib\site-packages\django\conf\locale\ast\LC_MESSAGES\django.po:
+  1105  
+  1106: msgid "CSRF verification failed. Request aborted."
+  1107  msgstr ""
+
+  1124  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1125: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1126  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1130  msgid ""
+  1131: "You are seeing this message because this site requires a CSRF cookie when "
+  1132  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\az\LC_MESSAGES\django.po:
+  1160  
+  1161: msgid "CSRF verification failed. Request aborted."
+  1162: msgstr "CSRF təsdiqləmə alınmadı. Sorğu ləğv edildi."
+  1163  
+
+  1182  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1183: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1184  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1187  "Əgər <meta name=\"referrer\" content=\"no-referrer\"> etiketini və ya "
+  1188: "“Referrer-Policy: no-referrer” başlığını işlədirsinizsə, lütfən silin. CSRF "
+  1189  "qoruma dəqiq yönləndirən yoxlaması üçün “Referer” başlığını tələb edir. Əgər "
+
+  1193  msgid ""
+  1194: "You are seeing this message because this site requires a CSRF cookie when "
+  1195  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1197  msgstr ""
+  1198: "Bu sayt formaları göndərmək üçün CSRF çərəzini işlədir. Bu çərəz "
+  1199  "səyyahınızın üçüncü biri tərəfindən hack-lənmədiyinə əmin olmaq üçün "
+
+myproject\Lib\site-packages\django\conf\locale\be\LC_MESSAGES\django.po:
+  1201  
+  1202: msgid "CSRF verification failed. Request aborted."
+  1203: msgstr "CSRF-праверка не атрымалася. Запыт спынены."
+  1204  
+
+  1227  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1228: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1229  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1233  "ці дадалі загаловак “Referrer-Policy: no-referrer”, калі ласка выдаліце іх. "
+  1234: "CSRF абароне неабходны “Referer” загаловак для строгай праверкі. Калі Вы "
+  1235  "турбуецеся аб прыватнасці, выкарыстоўвайце альтэрнатывы, напрыклад <a rel="
+
+  1238  msgid ""
+  1239: "You are seeing this message because this site requires a CSRF cookie when "
+  1240  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1242  msgstr ""
+  1243: "Вы бачыце гэта паведамленне, таму што гэты сайт патрабуе CSRF кукі для "
+  1244  "адсылкі формы. Гэтыя кукі неабходныя для бяспекі, каб пераканацца, што ваш "
+
+myproject\Lib\site-packages\django\conf\locale\bg\LC_MESSAGES\django.po:
+  1172  
+  1173: msgid "CSRF verification failed. Request aborted."
+  1174: msgstr "CSRF проверката се провали. Заявката прекратена."
+  1175  
+
+  1198  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1199: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1200  "If you’re concerned about privacy, use alternatives like <a "
+
+  1203  "Ако използвате <meta name=\"referrer\" content=\"no-referrer\"> таг или "
+  1204: "включвате “Referrer-Policy: no-referrer” header, моля премахнете ги. CSRF "
+  1205  "защитата изисква “Referer” header, за да извърши стриктна проверка на "
+
+  1209  msgid ""
+  1210: "You are seeing this message because this site requires a CSRF cookie when "
+  1211  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1213  msgstr ""
+  1214: "Вие виждате това съобщение, защото този сайт изисква CSRF бисквитка, когато "
+  1215  "се подават формуляри. Тази бисквитка е задължителна от съображения за "
+
+myproject\Lib\site-packages\django\conf\locale\bn\LC_MESSAGES\django.po:
+  1088  
+  1089: msgid "CSRF verification failed. Request aborted."
+  1090  msgstr ""
+
+  1107  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1108: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1109  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1113  msgid ""
+  1114: "You are seeing this message because this site requires a CSRF cookie when "
+  1115  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\br\LC_MESSAGES\django.po:
+  1167  
+  1168: msgid "CSRF verification failed. Request aborted."
+  1169  msgstr ""
+
+  1186  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1187: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1188  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1192  msgid ""
+  1193: "You are seeing this message because this site requires a CSRF cookie when "
+  1194  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\bs\LC_MESSAGES\django.po:
+  1108  
+  1109: msgid "CSRF verification failed. Request aborted."
+  1110  msgstr ""
+
+  1127  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1128: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1129  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1133  msgid ""
+  1134: "You are seeing this message because this site requires a CSRF cookie when "
+  1135  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\ca\LC_MESSAGES\django.po:
+  1184  
+  1185: msgid "CSRF verification failed. Request aborted."
+  1186: msgstr "La verificació de CSRF ha fallat. Petició abortada."
+  1187  
+
+  1210  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1211: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1212  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1216  "incloeu la capçalera  “Referer-Policy: no-referrer\" , si us plau elimineu-"
+  1217: "la. La protecció CSRF requereix la capçalera  “Referer\" per a fer una "
+  1218  "comprovació estricta. Si esteu preocupats quant a la privacitat, utilitzeu "
+
+  1222  msgid ""
+  1223: "You are seeing this message because this site requires a CSRF cookie when "
+  1224  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1226  msgstr ""
+  1227: "Estàs veient aquest missatge perquè aquest lloc requereix una galeta CSRF "
+  1228  "quan s'envien formularis. Aquesta galeta es requereix per motius de "
+
+myproject\Lib\site-packages\django\conf\locale\cs\LC_MESSAGES\django.po:
+  1208  
+  1209: msgid "CSRF verification failed. Request aborted."
+  1210: msgstr "Selhalo ověření typu CSRF. Požadavek byl zadržen."
+  1211  
+
+  1234  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1235: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1236  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1239  "Pokud používáte značku <meta name=\"referrer\" content=\"no-referrer\"> nebo "
+  1240: "záhlaví \"Referrer-Policy: no-referrer\", odeberte je. Ochrana typu CSRF "
+  1241  "vyžaduje, aby záhlaví zajišťovalo striktní hlídání refereru. Pokud je pro "
+
+  1245  msgid ""
+  1246: "You are seeing this message because this site requires a CSRF cookie when "
+  1247  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1250  "Tato zpráva se zobrazuje, protože tento web při odesílání formulářů požaduje "
+  1251: "v souboru cookie údaj CSRF, a to z bezpečnostních důvodů, aby se zajistilo, "
+  1252  "že se vašeho prohlížeče nezmocnil někdo další."
+
+myproject\Lib\site-packages\django\conf\locale\cy\LC_MESSAGES\django.po:
+  1143  
+  1144: msgid "CSRF verification failed. Request aborted."
+  1145: msgstr "Gwirio CSRF wedi methu.  Ataliwyd y cais."
+  1146  
+
+  1162  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1163: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1164  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1168  msgid ""
+  1169: "You are seeing this message because this site requires a CSRF cookie when "
+  1170  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1172  msgstr ""
+  1173: "Dangosir y neges hwn oherwydd bod angen cwci CSRF ar y safle hwn pan yn "
+  1174  "anfon ffurflenni.  Mae angen y cwci ar gyfer diogelwch er mwyn sicrhau nad "
+
+myproject\Lib\site-packages\django\conf\locale\da\LC_MESSAGES\django.po:
+  1164  
+  1165: msgid "CSRF verification failed. Request aborted."
+  1166: msgstr "CSRF-verifikationen mislykkedes. Forespørgslen blev afbrudt."
+  1167  
+
+  1190  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1191: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1192  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1196  "inkluderer headeren “Referrer-Policy: no-referrer”, så fjern dem venligst. "
+  1197: "CSRF-beskyttelsen afhænger af at “Referer”-headeren udfører stringent "
+  1198  "referer-kontrol. Hvis du er bekymret om privatliv, så brug alternativer så "
+
+  1201  msgid ""
+  1202: "You are seeing this message because this site requires a CSRF cookie when "
+  1203  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1205  msgstr ""
+  1206: "Du ser denne besked fordi denne webside kræver en CSRF-cookie, når du sender "
+  1207  "formularer. Denne cookie er påkrævet af sikkerhedsmæssige grunde for at "
+
+myproject\Lib\site-packages\django\conf\locale\de\LC_MESSAGES\django.po:
+  1181  
+  1182: msgid "CSRF verification failed. Request aborted."
+  1183: msgstr "CSRF-Verifizierung fehlgeschlagen. Anfrage abgebrochen."
+  1184  
+
+  1208  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1209: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1210  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1214  "„Referrer-Policy: no-referrer“-Header verwendet wird, entfernen Sie sie "
+  1215: "bitte. Der „Referer“-Header wird zur korrekten CSRF-Verifizierung benötigt. "
+  1216  "Falls es datenschutzrechtliche Gründe gibt, benutzen Sie bitte Alternativen "
+
+  1219  msgid ""
+  1220: "You are seeing this message because this site requires a CSRF cookie when "
+  1221  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1223  msgstr ""
+  1224: "Sie sehen Diese Nachricht, da diese Seite einen CSRF-Cookie beim Verarbeiten "
+  1225  "von Formulardaten benötigt. Dieses Cookie ist aus Sicherheitsgründen "
+
+myproject\Lib\site-packages\django\conf\locale\dsb\LC_MESSAGES\django.po:
+  1212  
+  1213: msgid "CSRF verification failed. Request aborted."
+  1214: msgstr "CSRF-pśeglědanje njejo se raźiło. Napšašowanje jo se pśetergnuło."
+  1215  
+
+  1238  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1239: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1240  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1243  "Jolic woznamjenje <meta name=\"referrer\" content=\"no-referrer\"> wužywaśo "
+  1244: "abo głowu „Referrer-Policy: no-referrer“ zapśimujośo, wótwónoźćo je. CSRF-"
+  1245  "šćit pomina se głowu „Referer“, aby striktnu kontrolu referera pśewjasć. "
+
+  1249  msgid ""
+  1250: "You are seeing this message because this site requires a CSRF cookie when "
+  1251  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1253  msgstr ""
+  1254: "Wiźiśo toś tu powěźeńku, dokulaž toś to HTTPS-sedło trjeba CSRF-cookie, aby "
+  1255  "formulary wótpósłało. Toś ten cookie jo trěbna z pśicynow wěstoty, aby so "
+
+myproject\Lib\site-packages\django\conf\locale\el\LC_MESSAGES\django.po:
+  1177  
+  1178: msgid "CSRF verification failed. Request aborted."
+  1179: msgstr "Η πιστοποίηση CSRF απέτυχε. Το αίτημα ματαιώθηκε."
+  1180  
+
+  1199  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1200: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1201  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1205  "\"> ή συμπεριλαμβάνετε την κεφαλίδα (header) 'Referrer-Policy: no-referrer', "
+  1206: "παρακαλούμε αφαιρέστε τα. Η προστασία CSRF απαιτεί την κεφαλίδα 'Referer' να "
+  1207  "κάνει αυστηρό έλεγχο στον referer. Αν κύριο μέλημα σας είναι η ιδιωτικότητα, "
+
+  1211  msgid ""
+  1212: "You are seeing this message because this site requires a CSRF cookie when "
+  1213  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1215  msgstr ""
+  1216: "Βλέπετε αυτό το μήνυμα επειδή αυτή η σελίδα απαιτεί ένα CSRF cookie, όταν "
+  1217  "κατατίθενται φόρμες. Αυτό το cookie είναι απαραίτητο για λόγους ασφαλείας, "
+
+myproject\Lib\site-packages\django\conf\locale\en\LC_MESSAGES\django.po:
+  1420  
+  1421: #: views/csrf.py:111
+  1422  msgid "Forbidden"
+
+  1424  
+  1425: #: views/csrf.py:112
+  1426: msgid "CSRF verification failed. Request aborted."
+  1427  msgstr ""
+  1428  
+  1429: #: views/csrf.py:116
+  1430  msgid ""
+
+  1436  
+  1437: #: views/csrf.py:122
+  1438  msgid ""
+
+  1443  
+  1444: #: views/csrf.py:127
+  1445  msgid ""
+
+  1447  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1448: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1449  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1452  
+  1453: #: views/csrf.py:136
+  1454  msgid ""
+  1455: "You are seeing this message because this site requires a CSRF cookie when "
+  1456  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1459  
+  1460: #: views/csrf.py:142
+  1461  msgid ""
+
+  1465  
+  1466: #: views/csrf.py:148
+  1467  msgid "More information is available with DEBUG=True."
+
+myproject\Lib\site-packages\django\conf\locale\en_AU\LC_MESSAGES\django.po:
+  1151  
+  1152: msgid "CSRF verification failed. Request aborted."
+  1153: msgstr "CSRF verification failed. Request aborted."
+  1154  
+
+  1173  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1174: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1175  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1179  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1180: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1181  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1184  msgid ""
+  1185: "You are seeing this message because this site requires a CSRF cookie when "
+  1186  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1188  msgstr ""
+  1189: "You are seeing this message because this site requires a CSRF cookie when "
+  1190  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\en_GB\LC_MESSAGES\django.po:
+  1089  
+  1090: msgid "CSRF verification failed. Request aborted."
+  1091  msgstr ""
+
+  1108  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1109: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1110  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1114  msgid ""
+  1115: "You are seeing this message because this site requires a CSRF cookie when "
+  1116  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\eo\LC_MESSAGES\django.po:
+  1177  
+  1178: msgid "CSRF verification failed. Request aborted."
+  1179: msgstr "Kontrolo de CSRF malsukcesis. Peto ĉesigita."
+  1180  
+
+  1203  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1204: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1205  "If you’re concerned about privacy, use alternatives like <a "
+
+  1209  "sendas la kapinstrukcion “Referrer-Policy: no-referrer”, bonvolu forigi "
+  1210: "ilin. La protekto kontraŭ CSRF postulas la ĉeeston de la kapinstrukcio "
+  1211  "“Referer”, kaj strikte kontrolas la referencantan fonton. Se vi zorgas pri "
+
+  1215  msgid ""
+  1216: "You are seeing this message because this site requires a CSRF cookie when "
+  1217  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1219  msgstr ""
+  1220: "Vi vidas tiun ĉi mesaĝon ĉar ĉi-tiu retejo postulas ke CSRF-kuketo estu "
+  1221  "sendita kune kun la formularoj. Tia kuketo estas bezonata pro sekurecaj "
+
+myproject\Lib\site-packages\django\conf\locale\es\LC_MESSAGES\django.po:
+  1229  
+  1230: msgid "CSRF verification failed. Request aborted."
+  1231: msgstr "La verificación CSRF ha fallado. Solicitud abortada."
+  1232  
+
+  1255  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1256: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1257  "If you’re concerned about privacy, use alternatives like <a "
+
+  1261  "referrer\"> o incluyendo el encabezado \"Referrer-Policy: no-referrer\", "
+  1262: "elimínelos. La protección CSRF requiere que el encabezado \"Referer\" "
+  1263  "realice una comprobación estricta del referente. Si le preocupa la "
+
+  1267  msgid ""
+  1268: "You are seeing this message because this site requires a CSRF cookie when "
+  1269  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1271  msgstr ""
+  1272: "Estás viendo este mensaje porqué esta web requiere una cookie CSRF cuando se "
+  1273  "envían formularios. Esta cookie se necesita por razones de seguridad, para "
+
+myproject\Lib\site-packages\django\conf\locale\es_AR\LC_MESSAGES\django.po:
+  1171  
+  1172: msgid "CSRF verification failed. Request aborted."
+  1173: msgstr "Verificación CSRF fallida. Petición abortada."
+  1174  
+
+  1198  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1199: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1200  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1204  "o está incluyendo el encabezado “Referrer-Policy: no-referrer” por favor "
+  1205: "quitelos. La protección CSRF necesita el encabezado “Referer” para realizar "
+  1206  "una comprobación estricta de los referers. Si le preocupa la privacidad "
+
+  1210  msgid ""
+  1211: "You are seeing this message because this site requires a CSRF cookie when "
+  1212  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1215  "Ud. está viendo este mensaje porque este sitio tiene como requerimiento el "
+  1216: "uso de una 'cookie' CSRF cuando se envíen formularios. El hecho de que esta "
+  1217  "'cookie' sea obligatoria es una medida de seguridad para comprobar que su "
+
+myproject\Lib\site-packages\django\conf\locale\es_CO\LC_MESSAGES\django.po:
+  1123  
+  1124: msgid "CSRF verification failed. Request aborted."
+  1125: msgstr "Verificación CSRF fallida. Solicitud abortada."
+  1126  
+
+  1142  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1143: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1144  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1148  msgid ""
+  1149: "You are seeing this message because this site requires a CSRF cookie when "
+  1150  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1152  msgstr ""
+  1153: "Estás viendo este mensaje porqué esta web requiere una cookie CSRF cuando se "
+  1154  "envían formularios. Esta cookie se necesita por razones de seguridad, para "
+
+myproject\Lib\site-packages\django\conf\locale\es_MX\LC_MESSAGES\django.po:
+  1150  
+  1151: msgid "CSRF verification failed. Request aborted."
+  1152  msgstr ""
+
+  1169  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1170: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1171  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1175  msgid ""
+  1176: "You are seeing this message because this site requires a CSRF cookie when "
+  1177  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\es_VE\LC_MESSAGES\django.po:
+  1125  
+  1126: msgid "CSRF verification failed. Request aborted."
+  1127: msgstr "Verificación CSRF fallida. Solicitud abortada."
+  1128  
+
+  1144  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1145: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1146  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1150  msgid ""
+  1151: "You are seeing this message because this site requires a CSRF cookie when "
+  1152  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1154  msgstr ""
+  1155: "Estás viendo este mensaje porqué esta web requiere una cookie CSRF cuando se "
+  1156  "envían formularios. Esta cookie se necesita por razones de seguridad, para "
+
+myproject\Lib\site-packages\django\conf\locale\et\LC_MESSAGES\django.po:
+  1159  
+  1160: msgid "CSRF verification failed. Request aborted."
+  1161: msgstr "CSRF verifitseerimine ebaõnnestus. Päring katkestati."
+  1162  
+
+  1185  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1186: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1187  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1191  "saadate päist “Referrer-Policy: no-referrer”, siis palun eemaldage need. "
+  1192: "CSRF kaitse vajab range viitaja kontrolliks päist “Referer”. Kui privaatsus "
+  1193  "on probleemiks, kasutage alternatiive nagu <a rel=\"noreferrer\" …> "
+
+  1196  msgid ""
+  1197: "You are seeing this message because this site requires a CSRF cookie when "
+  1198  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1200  msgstr ""
+  1201: "Näete seda teadet, kuna see leht vajab CSRF küpsist vormide postitamiseks. "
+  1202  "Seda küpsist on vaja turvakaalutlustel, kindlustamaks et teie brauserit ei "
+
+myproject\Lib\site-packages\django\conf\locale\eu\LC_MESSAGES\django.po:
+  1151  
+  1152: msgid "CSRF verification failed. Request aborted."
+  1153: msgstr "CSRF egiaztapenak huts egin du. Eskaera abortatu da."
+  1154  
+
+  1170  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1171: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1172  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1176  msgid ""
+  1177: "You are seeing this message because this site requires a CSRF cookie when "
+  1178  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1180  msgstr ""
+  1181: "Formularioa bidaltzean gune honek CSRF cookie bat behar duelako ikusten duzu "
+  1182  "mezu hau. Cookie hau beharrezkoa da segurtasun arrazoiengatik, zure "
+
+myproject\Lib\site-packages\django\conf\locale\fa\LC_MESSAGES\django.po:
+  1173  
+  1174: msgid "CSRF verification failed. Request aborted."
+  1175: msgstr "‏CSRF تأیید نشد. درخواست لغو شد."
+  1176  
+
+  1199  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1200: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1201  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1205  "می‌کنید یا سر تیتر \"Referrer-Policy: no-referrer\"  را اضافه کرده‌اید، لطفاً "
+  1206: "آن را حذف کنید. محافظ CSRF به سرتیتر \"Referer\" نیاز دارد تا بتواند بررسی "
+  1207  "سخت‌گیرانه ارجاع دهنده را انجام دهد. اگر ملاحظاتی در مورد حریم خصوصی دارید از "
+
+  1211  msgid ""
+  1212: "You are seeing this message because this site requires a CSRF cookie when "
+  1213  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1216  "شما این پیام را میبینید چون این سایت نیازمند کوکی «جعل درخواست میان وبگاهی "
+  1217: "(CSRF)» است. این کوکی برای امنیت شما ضروری است. با این کوکی می‌توانیم از "
+  1218  "اینکه شخص ثالثی کنترل مرورگرتان را به دست نگرفته است اطمینان پیدا کنیم."
+
+myproject\Lib\site-packages\django\conf\locale\fi\LC_MESSAGES\django.po:
+  1163  
+  1164: msgid "CSRF verification failed. Request aborted."
+  1165: msgstr "CSRF-vahvistus epäonnistui. Pyyntö hylätty."
+  1166  
+
+  1189  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1190: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1191  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1194  "Jos käytät <meta name=\"referrer\" content=\"no-referrer\">-tagia tai "
+  1195: "\"Referrer-Policy: no-referrer\" -otsaketta, ole hyvä ja poista ne. CSRF-"
+  1196  "suojaus vaatii Referer-otsakkeen tehdäkseen tarkan referer-tarkistuksen. Jos "
+
+  1200  msgid ""
+  1201: "You are seeing this message because this site requires a CSRF cookie when "
+  1202  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1204  msgstr ""
+  1205: "Näet tämän viestin, koska tämä sivusto vaatii CSRF-evästeen "
+  1206  "vastaanottaessaan lomaketietoja. Eväste vaaditaan turvallisuussyistä, "
+
+myproject\Lib\site-packages\django\conf\locale\fr\LC_MESSAGES\django.po:
+  1183  
+  1184: msgid "CSRF verification failed. Request aborted."
+  1185: msgstr "La vérification CSRF a échoué. La requête a été interrompue."
+  1186  
+
+  1210  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1211: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1212  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1216  "ou que vous incluez l’en-tête « Referrer-Policy: no-referrer », il est "
+  1217: "préférable de les enlever. La protection CSRF exige que l’en-tête "
+  1218  "``Referer`` effectue un contrôle de référant strict. Si vous vous souciez de "
+
+  1222  msgid ""
+  1223: "You are seeing this message because this site requires a CSRF cookie when "
+  1224  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1226  msgstr ""
+  1227: "Vous voyez ce message parce que ce site exige la présence d’un cookie CSRF "
+  1228  "lors de l’envoi de formulaires. Ce cookie est nécessaire pour des raisons de "
+
+myproject\Lib\site-packages\django\conf\locale\fy\LC_MESSAGES\django.po:
+  1088  
+  1089: msgid "CSRF verification failed. Request aborted."
+  1090  msgstr ""
+
+  1107  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1108: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1109  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1113  msgid ""
+  1114: "You are seeing this message because this site requires a CSRF cookie when "
+  1115  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\ga\LC_MESSAGES\django.po:
+  1161  
+  1162: msgid "CSRF verification failed. Request aborted."
+  1163  msgstr ""
+
+  1180  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1181: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1182  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1186  msgid ""
+  1187: "You are seeing this message because this site requires a CSRF cookie when "
+  1188  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\gd\LC_MESSAGES\django.po:
+  1225  
+  1226: msgid "CSRF verification failed. Request aborted."
+  1227: msgstr "Dh’fhàillig le dearbhadh CSRF. chaidh sgur dhen iarrtas."
+  1228  
+
+  1252  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1253: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1254  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1258  "\"> no a’ gabhail a-staigh bann-cinn “'Referrer-Policy: no-referrer” feuch "
+  1259: "an doir thu air falbh iad. Iarraidh an dìon CSRF bann-cinn “Referer” gus na "
+  1260  "referers a dhearbhadh gu teann. Ma tha thu iomagaineach a thaobh do "
+
+  1264  msgid ""
+  1265: "You are seeing this message because this site requires a CSRF cookie when "
+  1266  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1269  "Chì thu an teachdaireachd seo air sgàth ’s gu bheil an làrach-lìn seo ag "
+  1270: "iarraidh briosgaid CSRF nuair a chuireas tu foirm a-null. Tha feum air a’ "
+  1271  "bhriosgaid seo a chum tèarainteachd ach nach cleachd treas-phàrtaidh am "
+
+myproject\Lib\site-packages\django\conf\locale\gl\LC_MESSAGES\django.po:
+  1101  
+  1102: msgid "CSRF verification failed. Request aborted."
+  1103  msgstr ""
+
+  1120  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1121: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1122  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1126  msgid ""
+  1127: "You are seeing this message because this site requires a CSRF cookie when "
+  1128  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\he\LC_MESSAGES\django.po:
+  1176  
+  1177: msgid "CSRF verification failed. Request aborted."
+  1178: msgstr "אימות CSRF נכשל. הבקשה בוטלה."
+  1179  
+
+  1197  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1198: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1199  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1202  "אם השתמשת בתג<meta name=\"referrer\" content=\"no-referrer\">או הוספת header "
+  1203: "של “Referrer-Policy: no-referrer”, נא להסיר אותם. הגנת ה־CSRF דורשת"
+  1204  " ‎“Referer” header לבדיקת ה־referer. אם פרטיות מדאיגה אותך, ניתן להשתמש "
+
+  1207  msgid ""
+  1208: "You are seeing this message because this site requires a CSRF cookie when "
+  1209  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1211  msgstr ""
+  1212: "הודעה זו מופיעה מאחר ואתר זה דורש עוגיית CSRF כאשר שולחים טפסים. עוגיה זו "
+  1213  "נדרשת מסיבות אבטחה, כדי לוודא שהדפדפן שלך לא נחטף על ידי אחרים."
+
+myproject\Lib\site-packages\django\conf\locale\hi\LC_MESSAGES\django.po:
+  1125  
+  1126: msgid "CSRF verification failed. Request aborted."
+  1127: msgstr "CSRF सत्यापन असफल रहा. Request निरस्त की गई "
+  1128  
+
+  1144  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1145: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1146  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1150  msgid ""
+  1151: "You are seeing this message because this site requires a CSRF cookie when "
+  1152  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\hr\LC_MESSAGES\django.po:
+  1138  
+  1139: msgid "CSRF verification failed. Request aborted."
+  1140: msgstr "CSRF verifikacija nije uspjela. Zahtjev je prekinut."
+  1141  
+
+  1157  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1158: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1159  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1163  msgid ""
+  1164: "You are seeing this message because this site requires a CSRF cookie when "
+  1165  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1167  msgstr ""
+  1168: "Ova poruka vam se prikazuje jer stranica na kojoj se nalazite zahtjeva CSRF "
+  1169  "kolačić prilikom slanja forme. Navedeni kolačić je obavezan iz sigurnosnih "
+
+myproject\Lib\site-packages\django\conf\locale\hsb\LC_MESSAGES\django.po:
+  1197  
+  1198: msgid "CSRF verification failed. Request aborted."
+  1199: msgstr "CSRF-přepruwowanje je so nimokuliło.  Naprašowanje je so přetorhnyło."
+  1200  
+
+  1223  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1224: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1225  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1228  "Jeli značku  wužiwaće abo hłowu „Referrer-Policy: no-referrer“ zapřijimaće, "
+  1229: "wotstrońće je prošu. CSRF-škit trjeba hłowu „Referer“ , zo by striktnu "
+  1230  "kontrolu referer přewjedźe. Jeli so wo priwatnosć staraće, wužiwajće "
+
+  1233  msgid ""
+  1234: "You are seeing this message because this site requires a CSRF cookie when "
+  1235  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1237  msgstr ""
+  1238: "Widźiće tutu zdźělenku, dokelž tute sydło CSRF-plack trjeba, hdyž so "
+  1239  "formulary wotesyłaja. Tutón plack je z přičinow wěstoty trěbny, zo by so waš "
+
+myproject\Lib\site-packages\django\conf\locale\hu\LC_MESSAGES\django.po:
+  1183  
+  1184: msgid "CSRF verification failed. Request aborted."
+  1185: msgstr "CSRF ellenőrzés sikertelen. Kérés kiszolgálása megszakítva."
+  1186  
+
+  1205  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1206: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1207  "If you’re concerned about privacy, use alternatives like <a "
+
+  1211  "a “Referrer-Policy: no-referrer” fejlécet, kérjük távolítsa el ezeket. A "
+  1212: "CSRF védelemnek szüksége van a \"Referer\" fejléc adatra a szigorú "
+  1213  "ellenőrzéshez. Ha aggódik az adatainak biztonsága miatt, használjon "
+
+  1217  msgid ""
+  1218: "You are seeing this message because this site requires a CSRF cookie when "
+  1219  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1221  msgstr ""
+  1222: "Azért látja ezt az üzenetet, mert ez a weboldal elvárja a CSRF cookie "
+  1223  "elküldését űrlapoknál. Erre a cookie-ra biztonsági okból van szükség annak "
+
+myproject\Lib\site-packages\django\conf\locale\hy\LC_MESSAGES\django.po:
+  1101  
+  1102: msgid "CSRF verification failed. Request aborted."
+  1103: msgstr "CSRF ստուգման սխալ․ Հարցումն ընդհատված է"
+  1104  
+
+  1120  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1121: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1122  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1126  msgid ""
+  1127: "You are seeing this message because this site requires a CSRF cookie when "
+  1128  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1131  "Դուք տեսնում եք այս հաղորդագրությունը, քանի որ այս կայքը ձևաթերթերը "
+  1132: "ուղարկելու համար պահանջում է CSRF cookie։ Այն անհրաժեշտ է անվտանգության "
+  1133  "նկատառումներից ելնելով, համոզվելու համար, որ ձեր բրաուզերը չի գտնվում երրորդ "
+
+myproject\Lib\site-packages\django\conf\locale\ia\LC_MESSAGES\django.po:
+  1156  
+  1157: msgid "CSRF verification failed. Request aborted."
+  1158: msgstr "Verification CSRF fallite. Requesta abortate."
+  1159  
+
+  1175  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1176: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1177  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1181  msgid ""
+  1182: "You are seeing this message because this site requires a CSRF cookie when "
+  1183  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1185  msgstr ""
+  1186: "Tu vide iste message perque iste sito require un cookie CSRF durante le "
+  1187  "submission de formularios. Iste cookie es requirite pro motivos de "
+
+myproject\Lib\site-packages\django\conf\locale\id\LC_MESSAGES\django.po:
+  1156  
+  1157: msgid "CSRF verification failed. Request aborted."
+  1158: msgstr "Verifikasi CSRF gagal, Permintaan dibatalkan."
+  1159  
+
+  1182  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1183: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1184  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1188  "atau menyertakan bagian kepala 'Referrer-Policy: no-referrer', harap hapus "
+  1189: "hal tersebut. Perlindungan CSRF membutuhkan bagian kepala 'Referrer' untuk "
+  1190  "melakukan pemeriksaan pengarahan ketat. Jika Anda khawatir mengenai privasi, "
+
+  1194  msgid ""
+  1195: "You are seeing this message because this site requires a CSRF cookie when "
+  1196  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1198  msgstr ""
+  1199: "Anda melihat pesan ini karena situs ini membutuhkan sebuah kuki CSRF ketika "
+  1200  "mengirimkan formulir. Kuki ini dibutuhkan untuk alasan keamanan, untuk "
+
+myproject\Lib\site-packages\django\conf\locale\ig\LC_MESSAGES\django.po:
+  1116  
+  1117: msgid "CSRF verification failed. Request aborted."
+  1118: msgstr "Nyocha CSRF emeghị nke ọma. Ajuju atọrọ.."
+  1119  
+
+  1141  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1142: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1143  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1147  "mmado ma ọ bụ gụnyere isi nke \"Iwu-Onye na gba ama: neweghị onye na-gba ama"
+  1148: "\", biko wepu ha. Nchedo CSRF chọrọ ka isi “onye na  gba ama” wee mee nyocha "
+  1149  "ike nlele nke gbara ama. Ọ bụrụ na ihe gbasara gị gbasara nzuzo, jiri ụzọ "
+
+  1152  msgid ""
+  1153: "You are seeing this message because this site requires a CSRF cookie when "
+  1154  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1156  msgstr ""
+  1157: "I na-ahụ ozi a n'ihi na saịtị a chọrọ CSRF cookie mgbe ị na-edobe akwụkwọ. "
+  1158  "Achọrọ cookie a maka ebumnuche nchekwa, iji hụ na ndị ọzọ anaghị egbochi ihe "
+
+myproject\Lib\site-packages\django\conf\locale\io\LC_MESSAGES\django.po:
+  1099  
+  1100: msgid "CSRF verification failed. Request aborted."
+  1101  msgstr ""
+
+  1118  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1119: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1120  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1124  msgid ""
+  1125: "You are seeing this message because this site requires a CSRF cookie when "
+  1126  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\is\LC_MESSAGES\django.po:
+  1159  
+  1160: msgid "CSRF verification failed. Request aborted."
+  1161: msgstr "CSRF auðkenning tókst ekki."
+  1162  
+
+  1181  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1182: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1183  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1187  msgid ""
+  1188: "You are seeing this message because this site requires a CSRF cookie when "
+  1189  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1191  msgstr ""
+  1192: "Þú ert að fá þessi skilaboð því þetta vefsvæði þarfnast að CSRF kaka (e. "
+  1193  "cookie) sé send þegar form eru send. Þessi kaka er nauðsynleg af "
+
+myproject\Lib\site-packages\django\conf\locale\it\LC_MESSAGES\django.po:
+  1186  
+  1187: msgid "CSRF verification failed. Request aborted."
+  1188: msgstr "Verifica CSRF fallita. Richiesta interrotta."
+  1189  
+
+  1212  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1213: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1214  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1218  "header 'Referrer-Policy: no-referrer', per favore rimuovili. Per la "
+  1219: "protezione CSRF è necessario eseguire un controllo rigoroso sull'header "
+  1220  "'Referer'. Se ti preoccupano le ricadute sulla privacy, puoi ricorrere ad "
+
+  1223  msgid ""
+  1224: "You are seeing this message because this site requires a CSRF cookie when "
+  1225  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1227  msgstr ""
+  1228: "Stai vedendo questo messaggio perché questo sito richiede un cookie CSRF "
+  1229  "quando invii dei form. Questo cookie è necessario per ragioni di sicurezza, "
+
+myproject\Lib\site-packages\django\conf\locale\ja\LC_MESSAGES\django.po:
+  1154  
+  1155: msgid "CSRF verification failed. Request aborted."
+  1156: msgstr "CSRF検証に失敗したため、リクエストは中断されました。"
+  1157  
+
+  1179  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1180: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1181  "If you’re concerned about privacy, use alternatives like <a "
+
+  1185  "“Referrer-Policy: no-referrer” ヘッダを含んでいる場合は削除してください。"
+  1186: "CSRF プロテクションは、厳密に “Referer” ヘッダが必要です。プライバシーが気に"
+  1187  "なる場合は <a rel=\"noreferrer\" …> などの代替で第三者サイトと接続してくださ"
+
+  1190  msgid ""
+  1191: "You are seeing this message because this site requires a CSRF cookie when "
+  1192  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1194  msgstr ""
+  1195: "このメッセージが表示されている理由は、このサイトはフォーム送信時にCSRFクッ"
+  1196  "キーを必須としているためです。このクッキーはセキュリティ上の理由(使用中のブラ"
+
+myproject\Lib\site-packages\django\conf\locale\ka\LC_MESSAGES\django.po:
+  1107  
+  1108: msgid "CSRF verification failed. Request aborted."
+  1109  msgstr ""
+
+  1126  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1127: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1128  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1132  msgid ""
+  1133: "You are seeing this message because this site requires a CSRF cookie when "
+  1134  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\kab\LC_MESSAGES\django.po:
+  1081  
+  1082: msgid "CSRF verification failed. Request aborted."
+  1083  msgstr ""
+
+  1100  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1101: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1102  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1106  msgid ""
+  1107: "You are seeing this message because this site requires a CSRF cookie when "
+  1108  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\kk\LC_MESSAGES\django.po:
+  1091  
+  1092: msgid "CSRF verification failed. Request aborted."
+  1093  msgstr ""
+
+  1110  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1111: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1112  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1116  msgid ""
+  1117: "You are seeing this message because this site requires a CSRF cookie when "
+  1118  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\km\LC_MESSAGES\django.po:
+  1066  
+  1067: msgid "CSRF verification failed. Request aborted."
+  1068  msgstr ""
+
+  1085  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1086: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1087  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1091  msgid ""
+  1092: "You are seeing this message because this site requires a CSRF cookie when "
+  1093  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\kn\LC_MESSAGES\django.po:
+  1100  
+  1101: msgid "CSRF verification failed. Request aborted."
+  1102  msgstr ""
+
+  1119  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1120: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1121  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1125  msgid ""
+  1126: "You are seeing this message because this site requires a CSRF cookie when "
+  1127  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\ko\LC_MESSAGES\django.po:
+  1155  
+  1156: msgid "CSRF verification failed. Request aborted."
+  1157: msgstr "CSRF 검증에 실패했습니다. 요청을 중단하였습니다."
+  1158  
+
+  1180  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1181: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1182  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1185  "<meta name=\"referrer\" content=\"no-referrer\">태그나  'Referrer-Policy: no-"
+  1186: "referrer' 헤더를 포함하고 있다면, 제거해주시기 바랍니다. CSRF 방지를 위한 리"
+  1187  "퍼러 검사를 위해 'Referer' 헤더가 필요합니다. 개인 정보에 대해 우려가 있는 경"
+
+  1191  msgid ""
+  1192: "You are seeing this message because this site requires a CSRF cookie when "
+  1193  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1195  msgstr ""
+  1196: "이 메세지가 보이는 이유는 사이트가 폼을 제출할 때 CSRF 쿠키를 필요로 하기 때"
+  1197  "문입니다. 이 쿠키는 보안상의 이유로 필요하며, 제3자에 의해 당신의 브라우저가 "
+
+myproject\Lib\site-packages\django\conf\locale\ky\LC_MESSAGES\django.po:
+  1127  
+  1128: msgid "CSRF verification failed. Request aborted."
+  1129: msgstr "CSRF текшерүү кыйрады. Суроо четке кагылды."
+  1130  
+
+  1152  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1153: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1154  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1157  "Эгер сиз <meta name=\"referrer\" content=\"no-referrer\">тегин же “Referrer-"
+  1158: "Policy: no-referrer” хэдерин  колдонуп жатсаңыз, аларды өчүрүп салыңыз. CSRF "
+  1159  "коргоосу “Referer” хэдерин талап кылат. Эгер сиз коопсуздук жөнүндө "
+
+  1163  msgid ""
+  1164: "You are seeing this message because this site requires a CSRF cookie when "
+  1165  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1167  msgstr ""
+  1168: "Сиз бул билдирүүнү бул сайт форм жиберүүдө CSRF кукини талап кылгандыгы үчүн "
+  1169  "көрүп жатасыз.  Бул куки коопсуздуктан улам сиздин сайтыңыз үчүнчү жактан "
+
+myproject\Lib\site-packages\django\conf\locale\lb\LC_MESSAGES\django.po:
+  1083  
+  1084: msgid "CSRF verification failed. Request aborted."
+  1085  msgstr ""
+
+  1102  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1103: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1104  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1108  msgid ""
+  1109: "You are seeing this message because this site requires a CSRF cookie when "
+  1110  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\lt\LC_MESSAGES\django.po:
+  1186  
+  1187: msgid "CSRF verification failed. Request aborted."
+  1188: msgstr "Nepavyko CSRF patvirtinimas. Užklausa nutraukta."
+  1189  
+
+  1205  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1206: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1207  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1211  msgid ""
+  1212: "You are seeing this message because this site requires a CSRF cookie when "
+  1213  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1215  msgstr ""
+  1216: "Jūs matote šią žinutę nes šis puslapis reikalauja CSRF slapuko, kai "
+  1217  "pateikiama forma. Slapukas reikalaujamas saugumo sumetimais, kad užtikrinti "
+
+myproject\Lib\site-packages\django\conf\locale\lv\LC_MESSAGES\django.po:
+  1184  
+  1185: msgid "CSRF verification failed. Request aborted."
+  1186: msgstr "CSRF pārbaude neizdevās. Pieprasījums pārtrauks."
+  1187  
+
+  1210  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1211: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1212  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1215  "Ja jūs izmantojat <meta name=\"referrer\" content=\"no-referrer\"> tagu vai "
+  1216: "iekļaujat “Referrer-Policy: no-referrer” headeri, lūdzu noņemiet tos. CSRF "
+  1217  "aizsardzībai ir nepieciešams, lai “Referer” headerī tiktu veikta strikta "
+
+  1221  msgid ""
+  1222: "You are seeing this message because this site requires a CSRF cookie when "
+  1223  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1226  "Jūs redzat šo ziņojumu, jo, iesniedzot veidlapas, šai vietnei ir "
+  1227: "nepieciešams CSRF sīkfails. Šis sīkfails ir vajadzīgs drošības apsvērumu "
+  1228  "dēļ, lai pārliecinātos, ka trešās personas nepārņems kontroli pār jūsu "
+
+myproject\Lib\site-packages\django\conf\locale\mk\LC_MESSAGES\django.po:
+  1140  
+  1141: msgid "CSRF verification failed. Request aborted."
+  1142: msgstr "CSRF верификацијата не успеа. Барањето е прекинато."
+  1143  
+
+  1159  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1160: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1161  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1165  msgid ""
+  1166: "You are seeing this message because this site requires a CSRF cookie when "
+  1167  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1169  msgstr ""
+  1170: "Ја гледате оваа порака бидејќи овој сајт бара CSRF колаче (cookie) за да се "
+  1171  "поднесуваат форми. Ова колаче е потребно од безбедносни причини, за да се "
+
+myproject\Lib\site-packages\django\conf\locale\ml\LC_MESSAGES\django.po:
+  1142  
+  1143: msgid "CSRF verification failed. Request aborted."
+  1144  msgstr "സി എസ് ആർ എഫ് പരിശോധന പരാജയപ്പെട്ടു. റിക്വെസ്റ്റ് റദ്ദാക്കി."
+
+  1161  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1162: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1163  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1167  msgid ""
+  1168: "You are seeing this message because this site requires a CSRF cookie when "
+  1169  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1171  msgstr ""
+  1172: "ഫോം  സമർപ്പിക്കുമ്പോൾ ഒരു CSRF കുക്കി ഈ സൈറ്റിൽ ആവശ്യമാണ് എന്നതിനാലാണ് നിങ്ങൾ ഈ സന്ദേശം "
+  1173  "കാണുന്നത്. മറ്റുള്ളവരാരെങ്കിലും നിങ്ങളുടെ ബ്രൗസറിനെ നിയന്ത്രിക്കുന്നില്ല എന്ന് ഉറപ്പുവരുത്താനായി ഈ "
+
+myproject\Lib\site-packages\django\conf\locale\mn\LC_MESSAGES\django.po:
+  1114  
+  1115: msgid "CSRF verification failed. Request aborted."
+  1116: msgstr "CSRF дээр уналаа. Хүсэлт таслагдсан."
+  1117  
+
+  1133  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1134: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1135  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1139  msgid ""
+  1140: "You are seeing this message because this site requires a CSRF cookie when "
+  1141  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1143  msgstr ""
+  1144: "Энэ хуудсанд форм илгээхийн тулд CSRF күүки шаардлагатай учир Та энэ "
+  1145  "мэдэгдлийг харж байна. Энэ күүки нь гуравдагч этгээдээс хамгаалахын тулд "
+
+myproject\Lib\site-packages\django\conf\locale\mr\LC_MESSAGES\django.po:
+  1082  
+  1083: msgid "CSRF verification failed. Request aborted."
+  1084  msgstr ""
+
+  1101  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1102: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1103  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1107  msgid ""
+  1108: "You are seeing this message because this site requires a CSRF cookie when "
+  1109  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\ms\LC_MESSAGES\django.po:
+  1130  
+  1131: msgid "CSRF verification failed. Request aborted."
+  1132  msgstr "Verifikasi VSRF gagal. Permintaan dihentikan."
+
+  1156  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1157: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1158  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1162  "\"> atau memasukkan header \"Referer-Policy: no-referrer\", sila buangkan "
+  1163: "ia. Perlindungan CSRF memerlukan header \"Referer\" untuk melakukan "
+  1164  "penyemakan referer yang ketat. Sekiranya anda risau tentang privasi anda, "
+
+  1168  msgid ""
+  1169: "You are seeing this message because this site requires a CSRF cookie when "
+  1170  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1172  msgstr ""
+  1173: "Anda melihat mesej ini kerana laman ini memerlukan cookie CSRF apabila "
+  1174  "menghantar borang. Cookie ini diperlukan bagi tujuan keselamatan, bagi "
+
+myproject\Lib\site-packages\django\conf\locale\my\LC_MESSAGES\django.po:
+  1067  
+  1068: msgid "CSRF verification failed. Request aborted."
+  1069  msgstr ""
+
+  1086  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1087: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1088  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1092  msgid ""
+  1093: "You are seeing this message because this site requires a CSRF cookie when "
+  1094  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\nb\LC_MESSAGES\django.po:
+  1152  
+  1153: msgid "CSRF verification failed. Request aborted."
+  1154: msgstr "CSRF-verifisering feilet. Forespørsel avbrutt."
+  1155  
+
+  1178  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1179: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1180  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1183  "Hvis du bruker <meta name=\"referrer\" content=\"no-referrer\">-taggen eller "
+  1184: "inkluderer 'Referrer-Policy: no-referrer'-header, vennligst fjern dem. CSRF-"
+  1185  "beskyttelsen krever 'Referer'-headeren for å utføre streng kontroll av "
+
+  1189  msgid ""
+  1190: "You are seeing this message because this site requires a CSRF cookie when "
+  1191  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1193  msgstr ""
+  1194: "Du ser denne meldingen fordi denne nettsiden krever en CSRF-cookie når du "
+  1195  "sender inn skjemaer. Denne informasjonskapselen er nødvendig av "
+
+myproject\Lib\site-packages\django\conf\locale\ne\LC_MESSAGES\django.po:
+  1118  
+  1119: msgid "CSRF verification failed. Request aborted."
+  1120: msgstr "CSRF प्रमाणीकरण भएन । अनुरोध विफल ।"
+  1121  
+
+  1137  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1138: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1139  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1143  msgid ""
+  1144: "You are seeing this message because this site requires a CSRF cookie when "
+  1145  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\nl\LC_MESSAGES\django.po:
+  1176  
+  1177: msgid "CSRF verification failed. Request aborted."
+  1178: msgstr "CSRF-verificatie mislukt. Aanvraag afgebroken."
+  1179  
+
+  1202  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1203: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1204  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1207  "Als u de tag <meta name=\"referrer\" content=\"no-referrer\"> gebruikt of de "
+  1208: "header ‘Referrer-Policy: no-referrer’ opneemt, verwijder deze dan. De CSRF-"
+  1209  "bescherming vereist de ‘Referer’-header voor strenge referer-controle. Als u "
+
+  1213  msgid ""
+  1214: "You are seeing this message because this site requires a CSRF cookie when "
+  1215  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1217  msgstr ""
+  1218: "U ziet deze melding, omdat deze website vereist dat een CSRF-cookie wordt "
+  1219  "meegestuurd bij het verzenden van formulieren. Dit cookie is om "
+
+myproject\Lib\site-packages\django\conf\locale\nn\LC_MESSAGES\django.po:
+  1150  
+  1151: msgid "CSRF verification failed. Request aborted."
+  1152: msgstr "CSRF-verifikasjon feila. Førespurnad avbrote."
+  1153  
+
+  1176  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1177: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1178  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1182  "eller inkludera \"Referrer-Policy: no-referrer\" hovud, ver vennleg å fjerne "
+  1183: "dei. CSRF-vern krev \"Referer\" hovud for å gjennomføre strenge kontrollar "
+  1184  "av referer. Dersom du har bekymringar for personvern bruk alternativ som <a "
+
+  1187  msgid ""
+  1188: "You are seeing this message because this site requires a CSRF cookie when "
+  1189  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1191  msgstr ""
+  1192: "Du ser denne meldinga fordi denne nettsida krev ein CSRF informasjonskapsel "
+  1193  "når du sender inn skjema. Denne informasjonskapselen er eit krav på grunn av "
+
+myproject\Lib\site-packages\django\conf\locale\os\LC_MESSAGES\django.po:
+  1103  
+  1104: msgid "CSRF verification failed. Request aborted."
+  1105  msgstr ""
+
+  1122  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1123: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1124  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1128  msgid ""
+  1129: "You are seeing this message because this site requires a CSRF cookie when "
+  1130  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\pa\LC_MESSAGES\django.po:
+  1083  
+  1084: msgid "CSRF verification failed. Request aborted."
+  1085  msgstr ""
+
+  1102  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1103: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1104  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1108  msgid ""
+  1109: "You are seeing this message because this site requires a CSRF cookie when "
+  1110  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\pl\LC_MESSAGES\django.po:
+  1235  
+  1236: msgid "CSRF verification failed. Request aborted."
+  1237: msgstr "Weryfikacja CSRF nie powiodła się. Żądanie zostało przerwane."
+  1238  
+
+  1261  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1262: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1263  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1267  "umieszczasz nagłówek „Referrer-Policy: no-referrer”, prosimy je usunąć. "
+  1268: "Ochrona przed atakami CSRF wymaga nagłówka „Referer”, aby wykonać ścisłe "
+  1269  "sprawdzenie referera HTTP. Jeśli zależy ci na prywatności, użyj alternatyw "
+
+  1272  msgid ""
+  1273: "You are seeing this message because this site requires a CSRF cookie when "
+  1274  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1276  msgstr ""
+  1277: "Widzisz tą wiadomość, ponieważ ta witryna wymaga ciasteczka CSRF do "
+  1278  "przesyłania formularza. Ciasteczko to jest wymagane ze względów "
+
+myproject\Lib\site-packages\django\conf\locale\pt\LC_MESSAGES\django.po:
+  1112  
+  1113: msgid "CSRF verification failed. Request aborted."
+  1114: msgstr "A verificação de CSRF falhou. Pedido abortado."
+  1115  
+
+  1131  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1132: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1133  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1137  msgid ""
+  1138: "You are seeing this message because this site requires a CSRF cookie when "
+  1139  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1141  msgstr ""
+  1142: "Está a ver esta mensagem porque este site requer um cookie CSRF quando "
+  1143  "submete formulários. Este cookie é requirido por razões de segurança, para "
+
+myproject\Lib\site-packages\django\conf\locale\pt_BR\LC_MESSAGES\django.po:
+  1220  
+  1221: msgid "CSRF verification failed. Request aborted."
+  1222: msgstr "Verificação CSRF falhou. Pedido cancelado."
+  1223  
+
+  1246  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1247: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1248  "If you’re concerned about privacy, use alternatives like <a "
+
+  1252  "incluindo o cabeçalho “Referrer-Policy: no-referrer”, por favor remova-os. A "
+  1253: "proteção CSRF requer o cabeçalho “Referer” para fazer a checagem de "
+  1254  "referência. Se estiver preocupado com privacidade, use alternativas como <a "
+
+  1257  msgid ""
+  1258: "You are seeing this message because this site requires a CSRF cookie when "
+  1259  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1261  msgstr ""
+  1262: "Você está vendo esta mensagem, porque este site requer um cookie CSRF no "
+  1263  "envio de formulários. Este cookie é necessário por razões de segurança, para "
+
+myproject\Lib\site-packages\django\conf\locale\ro\LC_MESSAGES\django.po:
+  1143  
+  1144: msgid "CSRF verification failed. Request aborted."
+  1145: msgstr "Verificarea CSRF nereușită. Cerere eșuată."
+  1146  
+
+  1162  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1163: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1164  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1168  msgid ""
+  1169: "You are seeing this message because this site requires a CSRF cookie when "
+  1170  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1172  msgstr ""
+  1173: "Vedeți acest mesaj deoarece această pagină web necesită un cookie CSRF la "
+  1174  "trimiterea formularelor. Acest cookie este necesar din motive de securitate, "
+
+myproject\Lib\site-packages\django\conf\locale\ru\LC_MESSAGES\django.po:
+  1233  
+  1234: msgid "CSRF verification failed. Request aborted."
+  1235: msgstr "Ошибка проверки CSRF. Запрос отклонён."
+  1236  
+
+  1262  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1263: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1264  "If you’re concerned about privacy, use alternatives like <a "
+
+  1268  "referrer\"> или добавили HTTP-заголовок “Referrer-Policy: no-referrer”, "
+  1269: "пожалуйста удалите их. CSRF защите необходим заголовок “Referer” для строгой "
+  1270  "проверки адреса ссылающейся страницы. Если Вы беспокоитесь о приватности, "
+
+  1274  msgid ""
+  1275: "You are seeing this message because this site requires a CSRF cookie when "
+  1276  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1279  "Вы видите это сообщение, потому что данный сайт требует, чтобы при отправке "
+  1280: "форм была отправлена и CSRF-cookie. Данный тип cookie необходим по "
+  1281  "соображениям безопасности, чтобы убедиться, что ваш браузер не был взломан и "
+
+myproject\Lib\site-packages\django\conf\locale\sk\LC_MESSAGES\django.po:
+  1202  
+  1203: msgid "CSRF verification failed. Request aborted."
+  1204: msgstr "CSRF verifikázia zlyhala. Požiadavka bola prerušená."
+  1205  
+
+  1224  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1225: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1226  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1230  "vkladáte hlavičku 'Referrer-Policy: no-referrer', prosím odstránte ich. "
+  1231: "Ochrana CSRF vyžaduje hlavičku “Referer” na striktnú kontrolu. Ak máte obavy "
+  1232  "o súkromie, použite alternatívy ako <a rel=\"noreferrer\" …> pre linky na "
+
+  1235  msgid ""
+  1236: "You are seeing this message because this site requires a CSRF cookie when "
+  1237  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1239  msgstr ""
+  1240: "Túto správu vidíte, pretože táto lokalita vyžaduje CSRF cookie pri "
+  1241  "odosielaní formulárov. Toto cookie je potrebné na zabezpečenie toho, že váš "
+
+myproject\Lib\site-packages\django\conf\locale\sl\LC_MESSAGES\django.po:
+  1155  
+  1156: msgid "CSRF verification failed. Request aborted."
+  1157: msgstr "CSRF preverjanje ni uspelo. Zahtevek preklican."
+  1158  
+
+  1174  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1175: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1176  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1180  msgid ""
+  1181: "You are seeing this message because this site requires a CSRF cookie when "
+  1182  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1184  msgstr ""
+  1185: "To obvestilo vidite, ker ta spletna stran zahteva CSRF piškotek, ko "
+  1186  "pošiljate obrazce. Piškotek je potreben zaradi varnosti, da se zagotovi, da "
+
+myproject\Lib\site-packages\django\conf\locale\sq\LC_MESSAGES\django.po:
+  1173  
+  1174: msgid "CSRF verification failed. Request aborted."
+  1175: msgstr "Verifikimi CSRF dështoi. Kërkesa u ndërpre."
+  1176  
+
+  1198  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1199: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1200  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1204  "etiketën ose përfshini kryet “Referrer-Policy: no-referrer”, ju lutemi, "
+  1205: "hiqini. Mbrojtja CSRF lyp që kryet “Referer” të kryejnë kontroll strikt "
+  1206  "referuesi. Nëse shqetësoheni për privatësinë, për lidhje te sajte palësh të "
+
+  1209  msgid ""
+  1210: "You are seeing this message because this site requires a CSRF cookie when "
+  1211  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1213  msgstr ""
+  1214: "Këtë mesazh po e shihni ngaqë ky sajt lyp një cookie CSRF, kur parashtrohen "
+  1215  "formularë. Kjo cookie është e domosdoshme për arsye sigurie, për të bërë të "
+
+myproject\Lib\site-packages\django\conf\locale\sr\LC_MESSAGES\django.po:
+  1178  
+  1179: msgid "CSRF verification failed. Request aborted."
+  1180: msgstr "CSRF верификација није прошла. Захтев одбијен."
+  1181  
+
+  1204  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1205: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1206  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1209  "Ако користите <meta name=\"referrer\" content=\"no-referrer\"> таг или "
+  1210: "\"Referrer-Policy: no-referrer\" заглавље, молимо да их уклоните. CSRF "
+  1211  "заштита захтева \"Referer\" заглавље да би се обавила стриктна \"referrer\" "
+
+  1215  msgid ""
+  1216: "You are seeing this message because this site requires a CSRF cookie when "
+  1217  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1219  msgstr ""
+  1220: "Ова порука је приказана јер овај сајт захтева CSRF куки када се прослеђују "
+  1221  "подаци из форми. Овај куки је потребан из сигурносних разлога, да би се "
+
+myproject\Lib\site-packages\django\conf\locale\sr_Latn\LC_MESSAGES\django.po:
+  1180  
+  1181: msgid "CSRF verification failed. Request aborted."
+  1182: msgstr "CSRF verifikacija nije prošla. Zahtev odbijen."
+  1183  
+
+  1202  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1203: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1204  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1208  msgid ""
+  1209: "You are seeing this message because this site requires a CSRF cookie when "
+  1210  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1212  msgstr ""
+  1213: "Ova poruka je prikazana jer ovaj sajt zahteva CSRF kuki kada se prosleđuju "
+  1214  "podaci iz formi. Ovaj kuki je potreban iz sigurnosnih razloga, da bi se "
+
+myproject\Lib\site-packages\django\conf\locale\sv\LC_MESSAGES\django.po:
+  1184  
+  1185: msgid "CSRF verification failed. Request aborted."
+  1186: msgstr "CSRF-verifikation misslyckades. Förfrågan avbröts."
+  1187  
+
+  1209  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1210: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1211  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1214  "Om du använder <meta name=\"referrer\" content=\"no-referrer\">-taggen eller "
+  1215: "har med ”Referrer-Policy: no-referrer”, ta bort dem. CSRF-skyddet kräver "
+  1216  "”Referer” för att kunna göra sin strikta kontroll. Om du oroar dig över din "
+
+  1220  msgid ""
+  1221: "You are seeing this message because this site requires a CSRF cookie when "
+  1222  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1224  msgstr ""
+  1225: "Du ser detta meddelande eftersom denna sida kräver en CSRF-cookie när "
+  1226  "formulär skickas. Denna cookie krävs av säkerhetsskäl, för att säkerställa "
+
+myproject\Lib\site-packages\django\conf\locale\sw\LC_MESSAGES\django.po:
+  1089  
+  1090: msgid "CSRF verification failed. Request aborted."
+  1091  msgstr ""
+
+  1108  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1109: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1110  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1114  msgid ""
+  1115: "You are seeing this message because this site requires a CSRF cookie when "
+  1116  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\ta\LC_MESSAGES\django.po:
+  1100  
+  1101: msgid "CSRF verification failed. Request aborted."
+  1102  msgstr ""
+
+  1119  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1120: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1121  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1125  msgid ""
+  1126: "You are seeing this message because this site requires a CSRF cookie when "
+  1127  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\te\LC_MESSAGES\django.po:
+  1103  
+  1104: msgid "CSRF verification failed. Request aborted."
+  1105  msgstr ""
+
+  1122  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1123: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1124  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1128  msgid ""
+  1129: "You are seeing this message because this site requires a CSRF cookie when "
+  1130  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\tg\LC_MESSAGES\django.po:
+  1139  
+  1140: msgid "CSRF verification failed. Request aborted."
+  1141: msgstr "Мушкили дар тафтиши CSRF. Дархост рад шуд."
+  1142  
+
+  1167  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1168: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1169  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1173  msgid ""
+  1174: "You are seeing this message because this site requires a CSRF cookie when "
+  1175  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1178  "Шумо ин хабарро барои он мебинед, ки сомонаи мазкур талаб менамояд, то амали "
+  1179: "равонкунииформа ва CSRF cookie дар якҷоягӣ сурат гирад. Ин намуди 'cookie' "
+  1180  "аз ҷиҳати бехатарӣбарои мутмаин шудани он, ки браузери шумо аз тарафи шахси "
+
+myproject\Lib\site-packages\django\conf\locale\th\LC_MESSAGES\django.po:
+  1076  
+  1077: msgid "CSRF verification failed. Request aborted."
+  1078  msgstr ""
+
+  1095  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1096: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1097  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1101  msgid ""
+  1102: "You are seeing this message because this site requires a CSRF cookie when "
+  1103  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\tk\LC_MESSAGES\django.po:
+  1161  
+  1162: msgid "CSRF verification failed. Request aborted."
+  1163: msgstr "CSRF dogrylamak şowsuz. Talap ýatyryldy."
+  1164  
+
+  1182  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1183: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1184  "If you’re concerned about privacy, use alternatives like <a "
+
+  1188  "ýada \"Referrer-Policy: no-referrer\" header ulanýan bolsaňyz, olary "
+  1189: "aýyrmagyňyzy haýyş edýäris. CSRF goragy üçin \"Referer\" header-i dogry "
+  1190  "salgylanma üçin gereklidir. Eger siz gizlinlik üçin alada etseňiz, üçinji "
+
+  1194  msgid ""
+  1195: "You are seeing this message because this site requires a CSRF cookie when "
+  1196  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1198  msgstr ""
+  1199: "Bu sahypa formalary tabşyranda CSRF kukisini talap edýäligi sebäpli bu "
+  1200  "habary görýärsiňiz. Bu kuki, brauzeriňiziň üçünji taraplar tarapyndan "
+
+myproject\Lib\site-packages\django\conf\locale\tr\LC_MESSAGES\django.po:
+  1178  
+  1179: msgid "CSRF verification failed. Request aborted."
+  1180: msgstr "CSRF doğrulaması başarısız oldu. İstek iptal edildi."
+  1181  
+
+  1204  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1205: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1206  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1210  "kullanıyorsanız ya da “Referrer-Policy: no-referrer” üstbilgisini dahil "
+  1211: "ediyorsanız, lütfen bunları kaldırın. CSRF koruması, katı göndereni denetimi "
+  1212  "yapmak için “Referer” üstbilgisi gerektirir. Gizlilik konusunda endişeniz "
+
+  1216  msgid ""
+  1217: "You are seeing this message because this site requires a CSRF cookie when "
+  1218  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1220  msgstr ""
+  1221: "Bu iletiyi görüyorsunuz çünkü bu site, formları gönderdiğinizde bir CSRF "
+  1222  "tanımlama bilgisini gerektirir. Bu tanımlama bilgisi güvenlik nedenleri için "
+
+myproject\Lib\site-packages\django\conf\locale\tt\LC_MESSAGES\django.po:
+  1079  
+  1080: msgid "CSRF verification failed. Request aborted."
+  1081  msgstr ""
+
+  1098  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1099: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1100  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1104  msgid ""
+  1105: "You are seeing this message because this site requires a CSRF cookie when "
+  1106  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\udm\LC_MESSAGES\django.po:
+  1067  
+  1068: msgid "CSRF verification failed. Request aborted."
+  1069  msgstr ""
+
+  1086  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1087: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1088  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1092  msgid ""
+  1093: "You are seeing this message because this site requires a CSRF cookie when "
+  1094  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\uk\LC_MESSAGES\django.po:
+  1217  
+  1218: msgid "CSRF verification failed. Request aborted."
+  1219: msgstr "Помилка перевірки CSRF. Запит відхилений."
+  1220  
+
+  1240  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1241: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1242  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1246  msgid ""
+  1247: "You are seeing this message because this site requires a CSRF cookie when "
+  1248  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1251  "Ви бачите це повідомлення, тому що даний сайт вимагає, щоб при відправці "
+  1252: "форм була відправлена ​​і CSRF-cookie. Даний тип cookie необхідний з міркувань "
+  1253  "безпеки, щоб переконатися, що ваш браузер не був взламаний третьою стороною."
+
+myproject\Lib\site-packages\django\conf\locale\ur\LC_MESSAGES\django.po:
+  1092  
+  1093: msgid "CSRF verification failed. Request aborted."
+  1094  msgstr ""
+
+  1111  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1112: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1113  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1117  msgid ""
+  1118: "You are seeing this message because this site requires a CSRF cookie when "
+  1119  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\uz\LC_MESSAGES\django.po:
+  1132  
+  1133: msgid "CSRF verification failed. Request aborted."
+  1134: msgstr "CSRF tekshiruvi amalga oshmadi. So‘rov bekor qilindi."
+  1135  
+
+  1160  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1161: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1162  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1166  "\"Referrer-Policy: no-referer\" sarlavhasidan  foydalanayotgan bo'lsangiz, "
+  1167: "iltimos ularni olib tashlang. CSRF himoyasi \"Referer\" sarlavhasini "
+  1168  "havolalarni qat'iy tekshirishni talab qiladi. Agar maxfiyligingiz haqida "
+
+  1172  msgid ""
+  1173: "You are seeing this message because this site requires a CSRF cookie when "
+  1174  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1176  msgstr ""
+  1177: "Siz ushbu xabarni ko'rmoqdasiz, chunki ushbu sayt formalarni yuborishda CSRF "
+  1178  "cookie ma'lumotlarini talab qiladi. Ushbu cookie ma'lumotlari xavfsizlik "
+
+myproject\Lib\site-packages\django\conf\locale\vi\LC_MESSAGES\django.po:
+  1102  
+  1103: msgid "CSRF verification failed. Request aborted."
+  1104  msgstr ""
+
+  1121  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1122: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1123  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1127  msgid ""
+  1128: "You are seeing this message because this site requires a CSRF cookie when "
+  1129  "submitting forms. This cookie is required for security reasons, to ensure "
+
+myproject\Lib\site-packages\django\conf\locale\zh_Hans\LC_MESSAGES\django.po:
+  1149  
+  1150: msgid "CSRF verification failed. Request aborted."
+  1151: msgstr "CSRF验证失败. 请求被中断."
+  1152  
+
+  1172  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1173: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1174  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1177  "如果您使用的是<meta name=\"referrer\" content=\"no-referrer\">标签或包"
+  1178: "含“Referrer-Policy: no-referrer”的HTTP头，请将其删除。CSRF保护要求“Referer”头"
+  1179  "执行严格的Referer检查。如果你担心隐私问题，可以使用类似<a rel=\"noreferrer\" "
+
+  1182  msgid ""
+  1183: "You are seeing this message because this site requires a CSRF cookie when "
+  1184  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1186  msgstr ""
+  1187: "您看到此消息是由于该站点在提交表单时需要一个CSRF cookie。此项是出于安全考虑，"
+  1188  "以确保您的浏览器没有被第三方劫持。"
+
+myproject\Lib\site-packages\django\conf\locale\zh_Hant\LC_MESSAGES\django.po:
+  1079  
+  1080: msgid "CSRF verification failed. Request aborted."
+  1081: msgstr "CSRF 驗證失敗。已中止請求。"
+  1082  
+
+  1098  "including the “Referrer-Policy: no-referrer” header, please remove them. The "
+  1099: "CSRF protection requires the “Referer” header to do strict referer checking. "
+  1100  "If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+
+  1104  msgid ""
+  1105: "You are seeing this message because this site requires a CSRF cookie when "
+  1106  "submitting forms. This cookie is required for security reasons, to ensure "
+
+  1108  msgstr ""
+  1109: "你看到這個訊息，是因為這個網站要求在送出表單包含一個 CSRF cookie。這個 "
+  1110  "cookie 是用於安全用途，保護你的瀏覽器不被第三方挾持。"
+
+myproject\Lib\site-packages\django\conf\project_template\project_name\settings.py-tpl:
+  45      'django.middleware.common.CommonMiddleware',
+  46:     'django.middleware.csrf.CsrfViewMiddleware',
+  47      'django.contrib.auth.middleware.AuthenticationMiddleware',
+
+myproject\Lib\site-packages\django\contrib\admin\options.py:
+    66  from django.utils.translation import ngettext
+    67: from django.views.decorators.csrf import csrf_protect
+    68  from django.views.generic import RedirectView
+
+   113  
+   114: csrf_protect_m = method_decorator(csrf_protect)
+   115  
+
+  1747  
+  1748:     @csrf_protect_m
+  1749      def changeform_view(self, request, object_id=None, form_url="", extra_context=None):
+
+  1918  
+  1919:     @csrf_protect_m
+  1920      def changelist_view(self, request, extra_context=None):
+
+  2106  
+  2107:     @csrf_protect_m
+  2108      def delete_view(self, request, object_id, extra_context=None):
+
+myproject\Lib\site-packages\django\contrib\admin\sites.py:
+   22  from django.views.decorators.common import no_append_slash
+   23: from django.views.decorators.csrf import csrf_protect
+   24  from django.views.i18n import JavaScriptCatalog
+
+  245              inner = never_cache(inner)
+  246:         # We add csrf_protect here so this function can be used as a utility
+  247:         # function for any view, without having to repeat 'csrf_protect'.
+  248:         if not getattr(view, "csrf_exempt", False):
+  249:             inner = csrf_protect(inner)
+  250          return update_wrapper(inner, view)
+
+myproject\Lib\site-packages\django\contrib\admin\templates\admin\base.html:
+  58                  <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+  59:                     {% csrf_token %}
+  60                      <button type="submit">{% translate 'Log out' %}</button>
+
+myproject\Lib\site-packages\django\contrib\admin\templates\admin\change_form.html:
+  35  {% endblock %}
+  36: <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}{% if form_url %}action="{{ form_url }}" {% endif %}method="post" id="{{ opts.model_name }}_form" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}
+  37  <div>
+
+myproject\Lib\site-packages\django\contrib\admin\templates\admin\change_list.html:
+  60  
+  61:         <form id="changelist-form" method="post"{% if cl.formset and cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
+  62          {% if cl.formset %}
+
+myproject\Lib\site-packages\django\contrib\admin\templates\admin\delete_confirmation.html:
+  41      <ul>{{ deleted_objects|unordered_list }}</ul>
+  42:     <form method="post">{% csrf_token %}
+  43      <div>
+
+myproject\Lib\site-packages\django\contrib\admin\templates\admin\delete_selected_confirmation.html:
+  42      {% endfor %}
+  43:     <form method="post">{% csrf_token %}
+  44      <div>
+
+myproject\Lib\site-packages\django\contrib\admin\templates\admin\login.html:
+  45  
+  46: <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
+  47    <div class="form-row">
+
+myproject\Lib\site-packages\django\contrib\admin\templates\admin\auth\user\change_password.html:
+  18  {% block content %}<div id="content-main">
+  19: <form{% if form_url %} action="{{ form_url }}"{% endif %} method="post" id="{{ opts.model_name }}_form">{% csrf_token %}{% block form_top %}{% endblock %}
+  20  <input type="text" name="username" value="{{ original.get_username }}" class="hidden">
+
+myproject\Lib\site-packages\django\contrib\admin\templates\registration\password_change_done.html:
+  5    <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+  6:     {% csrf_token %}
+  7      <button type="submit">{% translate 'Log out' %}</button>
+
+myproject\Lib\site-packages\django\contrib\admin\templates\registration\password_change_form.html:
+   6    <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+   7:     {% csrf_token %}
+   8      <button type="submit">{% translate 'Log out' %}</button>
+
+  19  
+  20: <form method="post">{% csrf_token %}
+  21  <div>
+
+myproject\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_confirm.html:
+  17  
+  18: <form method="post">{% csrf_token %}
+  19  <fieldset class="module aligned">
+
+myproject\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_form.html:
+  15  
+  16: <form method="post">{% csrf_token %}
+  17  <fieldset class="module aligned">
+
+myproject\Lib\site-packages\django\contrib\auth\__init__.py:
+  6  from django.core.exceptions import ImproperlyConfigured, PermissionDenied
+  7: from django.middleware.csrf import rotate_token
+  8  from django.utils.crypto import constant_time_compare
+
+myproject\Lib\site-packages\django\contrib\auth\admin.py:
+   20  from django.utils.translation import gettext_lazy as _
+   21: from django.views.decorators.csrf import csrf_protect
+   22  from django.views.decorators.debug import sensitive_post_parameters
+   23  
+   24: csrf_protect_m = method_decorator(csrf_protect)
+   25  sensitive_post_parameters_m = method_decorator(sensitive_post_parameters())
+
+  115      @sensitive_post_parameters_m
+  116:     @csrf_protect_m
+  117      def add_view(self, request, form_url="", extra_context=None):
+
+myproject\Lib\site-packages\django\contrib\auth\views.py:
+   28  from django.views.decorators.cache import never_cache
+   29: from django.views.decorators.csrf import csrf_protect
+   30  from django.views.decorators.debug import sensitive_post_parameters
+
+   78      @method_decorator(sensitive_post_parameters())
+   79:     @method_decorator(csrf_protect)
+   80      @method_decorator(never_cache)
+
+  137      # RemovedInDjango50Warning: when the deprecation ends, move
+  138:     # @method_decorator(csrf_protect) from post() to dispatch().
+  139      @method_decorator(never_cache)
+
+  148  
+  149:     @method_decorator(csrf_protect)
+  150      def post(self, request, *args, **kwargs):
+
+  239  
+  240:     @method_decorator(csrf_protect)
+  241      def dispatch(self, *args, **kwargs):
+
+  369      @method_decorator(sensitive_post_parameters())
+  370:     @method_decorator(csrf_protect)
+  371      @method_decorator(login_required)
+
+myproject\Lib\site-packages\django\contrib\flatpages\views.py:
+   7  from django.utils.safestring import mark_safe
+   8: from django.views.decorators.csrf import csrf_protect
+   9  
+
+  12  # This view is called from FlatpageFallbackMiddleware.process_response
+  13: # when a 404 is raised, which often means CsrfViewMiddleware.process_view
+  14: # has not been called even if CsrfViewMiddleware is installed. So we need
+  15: # to use @csrf_protect, in case the template needs {% csrf_token %}.
+  16  # However, we can't just wrap this view; if no matching flatpage exists,
+  17  # or a redirect is required for authentication, the 404 needs to be returned
+  18: # without any CSRF checks. Therefore, we only
+  19: # CSRF protect the internal implementation.
+  20  
+
+  47  
+  48: @csrf_protect
+  49  def render_flatpage(request, f):
+
+myproject\Lib\site-packages\django\core\checks\__init__.py:
+  23  import django.core.checks.security.base  # NOQA isort:skip
+  24: import django.core.checks.security.csrf  # NOQA isort:skip
+  25  import django.core.checks.security.sessions  # NOQA isort:skip
+
+myproject\Lib\site-packages\django\core\checks\compatibility\django_4_0.py:
+   6  @register(Tags.compatibility)
+   7: def check_csrf_trusted_origins(app_configs, **kwargs):
+   8      errors = []
+   9:     for origin in settings.CSRF_TRUSTED_ORIGINS:
+  10          if "://" not in origin:
+
+  12                  Error(
+  13:                     "As of Django 4.0, the values in the CSRF_TRUSTED_ORIGINS "
+  14                      "setting must start with a scheme (usually http:// or "
+
+myproject\Lib\site-packages\django\core\checks\security\csrf.py:
+   9      "cross-site request forgery protection via the middleware "
+  10:     "('django.middleware.csrf.CsrfViewMiddleware' is not in your "
+  11      "MIDDLEWARE). Enabling the middleware is the safest approach "
+
+  16  W016 = Warning(
+  17:     "You have 'django.middleware.csrf.CsrfViewMiddleware' in your "
+  18:     "MIDDLEWARE, but you have not set CSRF_COOKIE_SECURE to True. "
+  19:     "Using a secure-only CSRF cookie makes it more difficult for network "
+  20:     "traffic sniffers to steal the CSRF token.",
+  21      id="security.W016",
+
+  24  
+  25: def _csrf_middleware():
+  26:     return "django.middleware.csrf.CsrfViewMiddleware" in settings.MIDDLEWARE
+  27  
+
+  29  @register(Tags.security, deploy=True)
+  30: def check_csrf_middleware(app_configs, **kwargs):
+  31:     passed_check = _csrf_middleware()
+  32      return [] if passed_check else [W003]
+
+  35  @register(Tags.security, deploy=True)
+  36: def check_csrf_cookie_secure(app_configs, **kwargs):
+  37      passed_check = (
+  38:         settings.CSRF_USE_SESSIONS
+  39:         or not _csrf_middleware()
+  40:         or settings.CSRF_COOKIE_SECURE is True
+  41      )
+
+  45  @register(Tags.security)
+  46: def check_csrf_failure_view(app_configs, **kwargs):
+  47:     from django.middleware.csrf import _get_failure_view
+  48  
+
+  53          msg = (
+  54:             "The CSRF failure view '%s' could not be imported."
+  55:             % settings.CSRF_FAILURE_VIEW
+  56          )
+
+  62              msg = (
+  63:                 "The CSRF failure view '%s' does not take the correct number of "
+  64:                 "arguments." % settings.CSRF_FAILURE_VIEW
+  65              )
+
+myproject\Lib\site-packages\django\middleware\csrf.py:
+   24  
+   25: logger = logging.getLogger("django.security.csrf")
+   26: # This matches if any character is not in CSRF_ALLOWED_CHARS.
+   27  invalid_token_chars_re = _lazy_re_compile("[^a-zA-Z0-9]")
+
+   31  REASON_BAD_REFERER = "Referer checking failed - %s does not match any trusted origins."
+   32: REASON_NO_CSRF_COOKIE = "CSRF cookie not set."
+   33: REASON_CSRF_TOKEN_MISSING = "CSRF token missing."
+   34  REASON_MALFORMED_REFERER = "Referer checking failed - Referer is malformed."
+
+   38  # The reason strings below are for passing to InvalidTokenFormat. They are
+   39: # phrases without a subject because they can be in reference to either the CSRF
+   40  # cookie or non-cookie token.
+
+   43  
+   44: CSRF_SECRET_LENGTH = 32
+   45: CSRF_TOKEN_LENGTH = 2 * CSRF_SECRET_LENGTH
+   46: CSRF_ALLOWED_CHARS = string.ascii_letters + string.digits
+   47: CSRF_SESSION_KEY = "_csrftoken"
+   48  
+
+   50  def _get_failure_view():
+   51:     """Return the view to be used for CSRF rejections."""
+   52:     return get_callable(settings.CSRF_FAILURE_VIEW)
+   53  
+   54  
+   55: def _get_new_csrf_string():
+   56:     return get_random_string(CSRF_SECRET_LENGTH, allowed_chars=CSRF_ALLOWED_CHARS)
+   57  
+
+   60      """
+   61:     Given a secret (assumed to be a string of CSRF_ALLOWED_CHARS), generate a
+   62      token by adding a mask and applying it to the secret.
+   63      """
+   64:     mask = _get_new_csrf_string()
+   65:     chars = CSRF_ALLOWED_CHARS
+   66      pairs = zip((chars.index(x) for x in secret), (chars.index(x) for x in mask))
+
+   72      """
+   73:     Given a token (assumed to be a string of CSRF_ALLOWED_CHARS, of length
+   74:     CSRF_TOKEN_LENGTH, and that its first half is a mask), use it to decrypt
+   75      the second half to produce the original secret.
+   76      """
+   77:     mask = token[:CSRF_SECRET_LENGTH]
+   78:     token = token[CSRF_SECRET_LENGTH:]
+   79:     chars = CSRF_ALLOWED_CHARS
+   80      pairs = zip((chars.index(x) for x in token), (chars.index(x) for x in mask))
+
+   83  
+   84: def _add_new_csrf_cookie(request):
+   85:     """Generate a new random CSRF_COOKIE value, and add it to request.META."""
+   86:     csrf_secret = _get_new_csrf_string()
+   87      request.META.update(
+
+   89              # RemovedInDjango50Warning: when the deprecation ends, replace
+   90:             # with: 'CSRF_COOKIE': csrf_secret
+   91:             "CSRF_COOKIE": (
+   92:                 _mask_cipher_secret(csrf_secret)
+   93:                 if settings.CSRF_COOKIE_MASKED
+   94:                 else csrf_secret
+   95              ),
+   96:             "CSRF_COOKIE_NEEDS_UPDATE": True,
+   97          }
+   98      )
+   99:     return csrf_secret
+  100  
+
+  103      """
+  104:     Return the CSRF token required for a POST form. The token is an
+  105      alphanumeric value. A new token is created if one is not already set.
+  106  
+  107:     A side effect of calling this function is to make the csrf_protect
+  108:     decorator and the CsrfViewMiddleware add a CSRF cookie and a 'Vary: Cookie'
+  109      header to the outgoing response.  For this reason, you may need to use this
+  110:     function lazily, as is done by the csrf context processor.
+  111      """
+  112:     if "CSRF_COOKIE" in request.META:
+  113:         csrf_secret = request.META["CSRF_COOKIE"]
+  114          # Since the cookie is being used, flag to send the cookie in
+
+  116          # renew the expiry timer.
+  117:         request.META["CSRF_COOKIE_NEEDS_UPDATE"] = True
+  118      else:
+  119:         csrf_secret = _add_new_csrf_cookie(request)
+  120:     return _mask_cipher_secret(csrf_secret)
+  121  
+
+  124      """
+  125:     Change the CSRF token in use for a request - should be done on login
+  126      for security purposes.
+  127      """
+  128:     _add_new_csrf_cookie(request)
+  129  
+
+  138      Raise an InvalidTokenFormat error if the token has an invalid length or
+  139:     characters that aren't allowed. The token argument can be a CSRF cookie
+  140:     secret or non-cookie CSRF token, and either masked or unmasked.
+  141      """
+  142:     if len(token) not in (CSRF_TOKEN_LENGTH, CSRF_SECRET_LENGTH):
+  143          raise InvalidTokenFormat(REASON_INCORRECT_LENGTH)
+  144:     # Make sure all characters are in CSRF_ALLOWED_CHARS.
+  145      if invalid_token_chars_re.search(token):
+
+  148  
+  149: def _does_token_match(request_csrf_token, csrf_secret):
+  150      """
+  151:     Return whether the given CSRF token matches the given CSRF secret, after
+  152      unmasking the token if necessary.
+  153  
+  154:     This function assumes that the request_csrf_token argument has been
+  155:     validated to have the correct length (CSRF_SECRET_LENGTH or
+  156:     CSRF_TOKEN_LENGTH characters) and allowed characters, and that if it has
+  157:     length CSRF_TOKEN_LENGTH, it is a masked secret.
+  158      """
+  159:     # Only unmask tokens that are exactly CSRF_TOKEN_LENGTH characters long.
+  160:     if len(request_csrf_token) == CSRF_TOKEN_LENGTH:
+  161:         request_csrf_token = _unmask_cipher_token(request_csrf_token)
+  162:     assert len(request_csrf_token) == CSRF_SECRET_LENGTH
+  163:     return constant_time_compare(request_csrf_token, csrf_secret)
+  164  
+
+  170  
+  171: class CsrfViewMiddleware(MiddlewareMixin):
+  172      """
+  173:     Require a present and correct csrfmiddlewaretoken for POST requests that
+  174:     have a CSRF cookie, and set an outgoing CSRF cookie.
+  175  
+  176:     This middleware should be used in conjunction with the {% csrf_token %}
+  177      template tag.
+
+  180      @cached_property
+  181:     def csrf_trusted_origins_hosts(self):
+  182          return [
+  183              urlparse(origin).netloc.lstrip("*")
+  184:             for origin in settings.CSRF_TRUSTED_ORIGINS
+  185          ]
+
+  188      def allowed_origins_exact(self):
+  189:         return {origin for origin in settings.CSRF_TRUSTED_ORIGINS if "*" not in origin}
+  190  
+
+  199              urlparse(origin)
+  200:             for origin in settings.CSRF_TRUSTED_ORIGINS
+  201              if "*" in origin
+
+  206      # The _accept and _reject methods currently only exist for the sake of the
+  207:     # requires_csrf_token decorator.
+  208      def _accept(self, request):
+
+  211          # are used.
+  212:         request.csrf_processing_done = True
+  213          return None
+
+  228          """
+  229:         Return the CSRF secret originally associated with the request, or None
+  230          if it didn't have one.
+  231  
+  232:         If the CSRF_USE_SESSIONS setting is false, raises InvalidTokenFormat if
+  233          the request's secret has invalid characters or an invalid length.
+  234          """
+  235:         if settings.CSRF_USE_SESSIONS:
+  236              try:
+  237:                 csrf_secret = request.session.get(CSRF_SESSION_KEY)
+  238              except AttributeError:
+  239                  raise ImproperlyConfigured(
+  240:                     "CSRF_USE_SESSIONS is enabled, but request.session is not "
+  241:                     "set. SessionMiddleware must appear before CsrfViewMiddleware "
+  242                      "in MIDDLEWARE."
+
+  245              try:
+  246:                 csrf_secret = request.COOKIES[settings.CSRF_COOKIE_NAME]
+  247              except KeyError:
+  248:                 csrf_secret = None
+  249              else:
+  250                  # This can raise InvalidTokenFormat.
+  251:                 _check_token_format(csrf_secret)
+  252:         if csrf_secret is None:
+  253              return None
+  254          # Django versions before 4.0 masked the secret before storing.
+  255:         if len(csrf_secret) == CSRF_TOKEN_LENGTH:
+  256:             csrf_secret = _unmask_cipher_token(csrf_secret)
+  257:         return csrf_secret
+  258  
+  259:     def _set_csrf_cookie(self, request, response):
+  260:         if settings.CSRF_USE_SESSIONS:
+  261:             if request.session.get(CSRF_SESSION_KEY) != request.META["CSRF_COOKIE"]:
+  262:                 request.session[CSRF_SESSION_KEY] = request.META["CSRF_COOKIE"]
+  263          else:
+  264              response.set_cookie(
+  265:                 settings.CSRF_COOKIE_NAME,
+  266:                 request.META["CSRF_COOKIE"],
+  267:                 max_age=settings.CSRF_COOKIE_AGE,
+  268:                 domain=settings.CSRF_COOKIE_DOMAIN,
+  269:                 path=settings.CSRF_COOKIE_PATH,
+  270:                 secure=settings.CSRF_COOKIE_SECURE,
+  271:                 httponly=settings.CSRF_COOKIE_HTTPONLY,
+  272:                 samesite=settings.CSRF_COOKIE_SAMESITE,
+  273              )
+  274:             # Set the Vary header since content varies with the CSRF cookie.
+  275              patch_vary_headers(response, ("Cookie",))
+
+  322              is_same_domain(referer.netloc, host)
+  323:             for host in self.csrf_trusted_origins_hosts
+  324          ):
+
+  328              settings.SESSION_COOKIE_DOMAIN
+  329:             if settings.CSRF_USE_SESSIONS
+  330:             else settings.CSRF_COOKIE_DOMAIN
+  331          )
+
+  349          if token_source != "POST":
+  350:             # Assume it is a settings.CSRF_HEADER_NAME value.
+  351              header_name = HttpHeaders.parse_header_name(token_source)
+  352              token_source = f"the {header_name!r} HTTP header"
+  353:         return f"CSRF token from {token_source} {reason}."
+  354  
+  355      def _check_token(self, request):
+  356:         # Access csrf_secret via self._get_secret() as rotate_token() may have
+  357          # been called by an authentication middleware during the
+
+  359          try:
+  360:             csrf_secret = self._get_secret(request)
+  361          except InvalidTokenFormat as exc:
+  362:             raise RejectRequest(f"CSRF cookie {exc.reason}.")
+  363  
+  364:         if csrf_secret is None:
+  365:             # No CSRF cookie. For POST requests, we insist on a CSRF cookie,
+  366:             # and in this way we can avoid all CSRF attacks, including login
+  367:             # CSRF.
+  368:             raise RejectRequest(REASON_NO_CSRF_COOKIE)
+  369  
+  370          # Check non-cookie token for match.
+  371:         request_csrf_token = ""
+  372          if request.method == "POST":
+  373              try:
+  374:                 request_csrf_token = request.POST.get("csrfmiddlewaretoken", "")
+  375              except UnreadablePostError:
+
+  381  
+  382:         if request_csrf_token == "":
+  383:             # Fall back to X-CSRFToken, to make things easier for AJAX, and
+  384              # possible for PUT/DELETE.
+  385              try:
+  386:                 # This can have length CSRF_SECRET_LENGTH or CSRF_TOKEN_LENGTH,
+  387                  # depending on whether the client obtained the token from
+
+  389                  # was masked or unmasked).
+  390:                 request_csrf_token = request.META[settings.CSRF_HEADER_NAME]
+  391              except KeyError:
+  392:                 raise RejectRequest(REASON_CSRF_TOKEN_MISSING)
+  393:             token_source = settings.CSRF_HEADER_NAME
+  394          else:
+
+  397          try:
+  398:             _check_token_format(request_csrf_token)
+  399          except InvalidTokenFormat as exc:
+
+  402  
+  403:         if not _does_token_match(request_csrf_token, csrf_secret):
+  404              reason = self._bad_token_message("incorrect", token_source)
+
+  408          try:
+  409:             csrf_secret = self._get_secret(request)
+  410          except InvalidTokenFormat:
+  411:             _add_new_csrf_cookie(request)
+  412          else:
+  413:             if csrf_secret is not None:
+  414                  # Use the same secret next time. If the secret was originally
+
+  417                  # saved anyways.
+  418:                 request.META["CSRF_COOKIE"] = csrf_secret
+  419  
+  420      def process_view(self, request, callback, callback_args, callback_kwargs):
+  421:         if getattr(request, "csrf_processing_done", False):
+  422              return None
+  423  
+  424:         # Wait until request.META["CSRF_COOKIE"] has been manipulated before
+  425          # bailing out, so that get_token still works
+  426:         if getattr(callback, "csrf_exempt", False):
+  427              return None
+
+  432  
+  433:         if getattr(request, "_dont_enforce_csrf_checks", False):
+  434:             # Mechanism to turn off CSRF checks for test suite. It comes after
+  435:             # the creation of CSRF cookies, so that everything else continues
+  436              # to work exactly the same (e.g. cookies are sent, etc.), but
+
+  455              #
+  456:             # The attacker will need to provide a CSRF cookie and token, but
+  457              # that's no problem for a MITM and the session-independent secret
+  458:             # we're using. So the MITM can circumvent the CSRF protection. This
+  459              # is true for any HTTP connection, but anyone using HTTPS expects
+
+  477      def process_response(self, request, response):
+  478:         if request.META.get("CSRF_COOKIE_NEEDS_UPDATE"):
+  479:             self._set_csrf_cookie(request, response)
+  480:             # Unset the flag to prevent _set_csrf_cookie() from being
+  481              # unnecessarily called again in process_response() by other
+  482:             # instances of CsrfViewMiddleware. This can happen e.g. when both a
+  483              # decorator and middleware are used. However,
+  484:             # CSRF_COOKIE_NEEDS_UPDATE is still respected in subsequent calls
+  485              # e.g. in case rotate_token() is called in process_response() later
+  486              # by custom middleware but before those subsequent calls.
+  487:             request.META["CSRF_COOKIE_NEEDS_UPDATE"] = False
+  488  
+
+myproject\Lib\site-packages\django\template\context_processors.py:
+  12  from django.conf import settings
+  13: from django.middleware.csrf import get_token
+  14  from django.utils.functional import SimpleLazyObject, lazy
+
+  16  
+  17: def csrf(request):
+  18      """
+  19:     Context processor that provides a CSRF token, or the string 'NOTPROVIDED' if
+  20      it has not been provided by either a view decorator or the middleware
+
+  32  
+  33:     return {"csrf_token": SimpleLazyObject(_get_val)}
+  34  
+
+myproject\Lib\site-packages\django\template\context.py:
+  3  
+  4: # Hard-coded processor for easier use of CSRF protection.
+  5: _builtin_context_processors = ("django.template.context_processors.csrf",)
+  6  
+
+myproject\Lib\site-packages\django\template\defaulttags.py:
+   66  
+   67: class CsrfTokenNode(Node):
+   68      child_nodelists = ()
+
+   70      def render(self, context):
+   71:         csrf_token = context.get("csrf_token")
+   72:         if csrf_token:
+   73:             if csrf_token == "NOTPROVIDED":
+   74                  return format_html("")
+
+   76                  return format_html(
+   77:                     '<input type="hidden" name="csrfmiddlewaretoken" value="{}">',
+   78:                     csrf_token,
+   79                  )
+
+   84                  warnings.warn(
+   85:                     "A {% csrf_token %} was used in a template, but the context "
+   86                      "did not provide the value.  This is usually caused by not "
+
+  664  @register.tag
+  665: def csrf_token(parser, token):
+  666:     return CsrfTokenNode()
+  667  
+
+myproject\Lib\site-packages\django\template\library.py:
+  271          new_context = context.new(_dict)
+  272:         # Copy across the CSRF token, if present, because inclusion tags are
+  273:         # often used for forms, and we need instructions for using CSRF
+  274          # protection to be as simple as possible.
+  275:         csrf_token = context.get("csrf_token")
+  276:         if csrf_token is not None:
+  277:             new_context["csrf_token"] = csrf_token
+  278          return t.render(new_context)
+
+myproject\Lib\site-packages\django\template\backends\dummy.py:
+   7  from .base import BaseEngine
+   8: from .utils import csrf_input_lazy, csrf_token_lazy
+   9  
+
+  48          if request is not None:
+  49:             context["csrf_input"] = csrf_input_lazy(request)
+  50:             context["csrf_token"] = csrf_token_lazy(request)
+  51          return self.safe_substitute(context)
+
+myproject\Lib\site-packages\django\template\backends\jinja2.py:
+  63      def render(self, context=None, request=None):
+  64:         from .utils import csrf_input_lazy, csrf_token_lazy
+  65  
+
+  69              context["request"] = request
+  70:             context["csrf_input"] = csrf_input_lazy(request)
+  71:             context["csrf_token"] = csrf_token_lazy(request)
+  72              for context_processor in self.backend.template_context_processors:
+
+myproject\Lib\site-packages\django\template\backends\utils.py:
+   1: from django.middleware.csrf import get_token
+   2  from django.utils.functional import lazy
+
+   6  
+   7: def csrf_input(request):
+   8      return format_html(
+   9:         '<input type="hidden" name="csrfmiddlewaretoken" value="{}">',
+  10          get_token(request),
+
+  13  
+  14: csrf_input_lazy = lazy(csrf_input, SafeString, str)
+  15: csrf_token_lazy = lazy(get_token, str)
+
+myproject\Lib\site-packages\django\test\client.py:
+   131  
+   132:     def __init__(self, enforce_csrf_checks=True, *args, **kwargs):
+   133:         self.enforce_csrf_checks = enforce_csrf_checks
+   134          super().__init__(*args, **kwargs)
+
+   146          # sneaky little hack so that we can easily get round
+   147:         # CsrfViewMiddleware.  This makes life easier, and is probably
+   148          # required for backwards compatibility with external tests against
+   149          # admin views.
+   150:         request._dont_enforce_csrf_checks = not self.enforce_csrf_checks
+   151  
+
+   177  
+   178:     def __init__(self, enforce_csrf_checks=True, *args, **kwargs):
+   179:         self.enforce_csrf_checks = enforce_csrf_checks
+   180          super().__init__(*args, **kwargs)
+
+   199          # Sneaky little hack so that we can easily get round
+   200:         # CsrfViewMiddleware. This makes life easier, and is probably required
+   201          # for backwards compatibility with external tests against admin views.
+   202:         request._dont_enforce_csrf_checks = not self.enforce_csrf_checks
+   203          # Request goes through middleware.
+
+   777      def __init__(
+   778:         self, enforce_csrf_checks=False, raise_request_exception=True, **defaults
+   779      ):
+   780          super().__init__(**defaults)
+   781:         self.handler = ClientHandler(enforce_csrf_checks)
+   782          self.raise_request_exception = raise_request_exception
+
+  1033      def __init__(
+  1034:         self, enforce_csrf_checks=False, raise_request_exception=True, **defaults
+  1035      ):
+  1036          super().__init__(**defaults)
+  1037:         self.handler = AsyncClientHandler(enforce_csrf_checks)
+  1038          self.raise_request_exception = raise_request_exception
+
+myproject\Lib\site-packages\django\views\csrf.py:
+   14  
+   15: CSRF_FAILURE_TEMPLATE = """
+   16  <!DOCTYPE html>
+
+   62    <a
+   63:   href="https://docs.djangoproject.com/en/{{ docs_version }}/ref/csrf/">Django’s
+   64:   CSRF mechanism</a> has not been used correctly.  For POST forms, you need to
+   65    ensure:</p>
+
+   73  
+   74:     <li>In the template, there is a <code>{% templatetag openblock %} csrf_token
+   75      {% templatetag closeblock %}</code> template tag inside each POST form that
+
+   77  
+   78:     <li>If you are not using <code>CsrfViewMiddleware</code>, then you must use
+   79:     <code>csrf_protect</code> on any views that use the <code>csrf_token</code>
+   80      template tag, as well as those that accept the POST data.</li>
+   81  
+   82:     <li>The form has a valid CSRF token. After logging in in another browser
+   83      tab or hitting the back button after a login, you may need to reload the
+
+   90  
+   91:   <p>You can customize this page using the CSRF_FAILURE_VIEW setting.</p>
+   92  </div>
+
+  100  """  # NOQA
+  101: CSRF_FAILURE_TEMPLATE_NAME = "403_csrf.html"
+  102  
+  103  
+  104: def csrf_failure(request, reason="", template_name=CSRF_FAILURE_TEMPLATE_NAME):
+  105      """
+  106:     Default view used when request fails CSRF protection
+  107      """
+  108:     from django.middleware.csrf import REASON_NO_CSRF_COOKIE, REASON_NO_REFERER
+  109  
+
+  111          "title": _("Forbidden"),
+  112:         "main": _("CSRF verification failed. Request aborted."),
+  113          "reason": reason,
+
+  128              'content="no-referrer"> tag or including the “Referrer-Policy: '
+  129:             "no-referrer” header, please remove them. The CSRF protection "
+  130              "requires the “Referer” header to do strict referer checking. If "
+
+  133          ),
+  134:         "no_cookie": reason == REASON_NO_CSRF_COOKIE,
+  135          "no_cookie1": _(
+  136:             "You are seeing this message because this site requires a CSRF "
+  137              "cookie when submitting forms. This cookie is required for "
+
+  152      except TemplateDoesNotExist:
+  153:         if template_name == CSRF_FAILURE_TEMPLATE_NAME:
+  154              # If the default template doesn't exist, use the string template.
+  155:             t = Engine().from_string(CSRF_FAILURE_TEMPLATE)
+  156              c = Context(c)
+
+myproject\Lib\site-packages\django\views\defaults.py:
+    9  from django.template import Context, Engine, TemplateDoesNotExist, loader
+   10: from django.views.decorators.csrf import requires_csrf_token
+   11  
+
+   28  
+   29: # These views can be called when CsrfViewMiddleware.process_view() not run,
+   30: # therefore need @requires_csrf_token in case the template needs
+   31: # {% csrf_token %}.
+   32  
+   33  
+   34: @requires_csrf_token
+   35  def page_not_found(request, exception, template_name=ERROR_404_TEMPLATE_NAME):
+
+   81  
+   82: @requires_csrf_token
+   83  def server_error(request, template_name=ERROR_500_TEMPLATE_NAME):
+
+  101  
+  102: @requires_csrf_token
+  103  def bad_request(request, exception, template_name=ERROR_400_TEMPLATE_NAME):
+
+  123  
+  124: @requires_csrf_token
+  125  def permission_denied(request, exception, template_name=ERROR_403_TEMPLATE_NAME):
+
+myproject\Lib\site-packages\django\views\decorators\csrf.py:
+   2  
+   3: from django.middleware.csrf import CsrfViewMiddleware, get_token
+   4  from django.utils.decorators import decorator_from_middleware
+   5  
+   6: csrf_protect = decorator_from_middleware(CsrfViewMiddleware)
+   7: csrf_protect.__name__ = "csrf_protect"
+   8: csrf_protect.__doc__ = """
+   9: This decorator adds CSRF protection in exactly the same way as
+  10: CsrfViewMiddleware, but it can be used on a per view basis.  Using both, or
+  11  using the decorator multiple times, is harmless and efficient.
+
+  14  
+  15: class _EnsureCsrfToken(CsrfViewMiddleware):
+  16:     # Behave like CsrfViewMiddleware but don't reject requests or log warnings.
+  17      def _reject(self, request, reason):
+
+  20  
+  21: requires_csrf_token = decorator_from_middleware(_EnsureCsrfToken)
+  22: requires_csrf_token.__name__ = "requires_csrf_token"
+  23: requires_csrf_token.__doc__ = """
+  24: Use this decorator on views that need a correct csrf_token available to
+  25: RequestContext, but without the CSRF protection that csrf_protect
+  26  enforces.
+
+  29  
+  30: class _EnsureCsrfCookie(CsrfViewMiddleware):
+  31      def _reject(self, request, reason):
+
+  40  
+  41: ensure_csrf_cookie = decorator_from_middleware(_EnsureCsrfCookie)
+  42: ensure_csrf_cookie.__name__ = "ensure_csrf_cookie"
+  43: ensure_csrf_cookie.__doc__ = """
+  44: Use this decorator to ensure that a view sets a CSRF cookie, whether or not it
+  45: uses the csrf_token template tag, or the CsrfViewMiddleware is used.
+  46  """
+
+  48  
+  49: def csrf_exempt(view_func):
+  50:     """Mark a view function as being exempt from the CSRF view protection."""
+  51  
+  52:     # view_func.csrf_exempt = True would also work, but decorators are nicer
+  53      # if they don't have side effects, so return a new function.
+
+  56  
+  57:     wrapped_view.csrf_exempt = True
+  58      return wraps(view_func)(wrapped_view)
+
+myproject\Lib\site-packages\django\views\generic\base.py:
+  113          view.__annotations__ = cls.dispatch.__annotations__
+  114:         # Copy possible attributes set by decorators, e.g. @csrf_exempt, from
+  115          # the dispatch method.
+
+myproject\Lib\site-packages\Django-4.1.7.dist-info\RECORD:
+  3693  django/core/checks/security/__pycache__/base.cpython-311.pyc,,
+  3694: django/core/checks/security/__pycache__/csrf.cpython-311.pyc,,
+  3695  django/core/checks/security/__pycache__/sessions.cpython-311.pyc,,
+  3696  django/core/checks/security/base.py,sha256=I0Gm446twRIhbRopEmKsdsYW_NdI7_nK_ZV28msRPEo,9140
+  3697: django/core/checks/security/csrf.py,sha256=hmFJ4m9oxDGwhDAWedmtpnIYQcI8Mxcge1D6CCoOBbc,2055
+  3698  django/core/checks/security/sessions.py,sha256=Qyb93CJeQBM5LLhhrqor4KQJR2tSpFklS-p7WltXcHc,2554
+
+  4199  django/middleware/__pycache__/common.cpython-311.pyc,,
+  4200: django/middleware/__pycache__/csrf.cpython-311.pyc,,
+  4201  django/middleware/__pycache__/gzip.cpython-311.pyc,,
+
+  4207  django/middleware/common.py,sha256=9G8G40Jd6vNeSVQfu1bKO-y2Rd550Lsm8ohr_fDeAnU,7603
+  4208: django/middleware/csrf.py,sha256=uosTUtHAj6P7Puam7VtYfRxqKCWGWEOUcnunviwsOlU,19773
+  4209  django/middleware/gzip.py,sha256=P_gEykSWFCwAhcsm4bUB8bvv6oH7B3gl47O3ezOACsQ,2143
+
+  4407  django/views/__pycache__/__init__.cpython-311.pyc,,
+  4408: django/views/__pycache__/csrf.cpython-311.pyc,,
+  4409  django/views/__pycache__/debug.cpython-311.pyc,,
+
+  4412  django/views/__pycache__/static.cpython-311.pyc,,
+  4413: django/views/csrf.py,sha256=8brhoog4O9MiOnXk_v79uiiHENwD0TwTvQzyXexl874,6306
+  4414  django/views/debug.py,sha256=D-BpQ5_fvj7C4tgaTWYYlZyLjzl9gKBH_RBFyk_ZVCU,23364
+
+  4419  django/views/decorators/__pycache__/common.cpython-311.pyc,,
+  4420: django/views/decorators/__pycache__/csrf.cpython-311.pyc,,
+  4421  django/views/decorators/__pycache__/debug.cpython-311.pyc,,
+
+  4427  django/views/decorators/common.py,sha256=aEdBGv0ri5lWz2Jl47Ifun2xTfZ0UacpY-CyDKv6-os,490
+  4428: django/views/decorators/csrf.py,sha256=k2Jv_PZ_zIoLX027TSScKafeKPzp3W6xQvL50g0gFh8,2075
+  4429  django/views/decorators/debug.py,sha256=MXGthVNjdh8wzX7BepHN6SEniWhziU2tHMRJs7ijjdU,3150
+
+portfolio\settings.py:
+  51      'django.middleware.common.CommonMiddleware',
+  52:     'django.middleware.csrf.CsrfViewMiddleware',
+  53      'django.contrib.auth.middleware.AuthenticationMiddleware',
+
+templates\hire-me.html:
+  8                  <form method="POST">
+  9:                     {% csrf_token %}
+  10                      <div class="mb-3"><label class="form-label" for="subject">Subject</label>
